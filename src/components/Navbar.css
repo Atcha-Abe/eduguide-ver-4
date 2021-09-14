@@ -1,0 +1,84 @@
+.navbar {
+    background-color: white;
+}
+.navbar__wrapper {
+    color: var(--eduguide_blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: -5%; 
+    margin-left: -9%;
+    margin-bottom: -7.5%;
+} 
+
+.navbar__logo {
+    flex: .2;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 0.5vw;
+}
+
+img {
+    width: 60%;
+}
+
+.navbar__icon {
+    font-size: 20px;
+}
+.navbar__links {
+    flex: .5;
+    display: flex;
+    margin-top: -1vw;
+    margin-left: -58%;
+    margin-right: 10%;
+    justify-content:space-around;
+}
+
+.navbar__link {
+    list-style: none;
+    cursor: pointer;
+    font-size: 1.5vw;
+    transition: .2s;
+    text-decoration: none;
+}
+
+.navbar__link:hover{
+    color: var(--eduguide_orange);
+    transform: scale(1.05);
+}
+.navbar__burger {
+    font-size: 3vw;
+    display: none;
+    cursor: pointer;
+}
+
+.login-item{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    transition: .2s;
+    margin: -5.9%;
+    margin-right: -14%;
+    font-size: 1.5vw;
+    color: var(--eduguide_blue);
+}
+
+.login-item li {display:flex;margin-left: 3%}
+
+.login-item:hover{
+    color: var(--eduguide_orange);
+    transform: scale(1.02);
+}
+
+@media(max-width: 500px){
+    .navbar__links{
+        display: none;
+    }
+    .about__links{
+        display: none;
+    }
+    .navbar__burger {
+        display: block;
+    }
+
+}

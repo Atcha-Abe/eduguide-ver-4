@@ -1,0 +1,10 @@
+:root {
+    --eduguide_blue: #16367C; 
+    --eduguide_orange: #F19336; 
+    font-family: Ruda;
+}
+
+* {
+    margin: 1vw;
+    box-sizing: border-box; 
+}

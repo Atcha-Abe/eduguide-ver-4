@@ -1,0 +1,82 @@
+.sign-form{
+    font-size: 1.55vw;
+    color:  var(--eduguide_blue);
+    margin-left: 40%;
+}
+
+label {
+    margin-left: -9%;
+}
+form {
+    margin-bottom: 1vw;
+}
+.field {
+    font-family: Ruda;
+    font-size: 1.55vw;
+    color:  var(--eduguide_blue);
+    margin-left: 12%;
+    margin-bottom: -1vw;
+    margin-top: -5%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-width:unset;
+    width: 30%;
+    display:list-item;
+}
+
+.reg-btn {
+    font-size: 1.65vw;
+    background-color: var(--eduguide_blue);
+    color: white;
+    padding: 0.5vw 2vw;
+    border: none;
+    border-radius: 3vw;
+    font-weight:600;
+    text-decoration: none;
+}
+
+h3 {
+    font-size: 1vw;
+    color: var(--eduguide_blue);
+    text-align: center;
+    margin-bottom: 0.5%;
+}
+
+.profile-btn {
+    margin-top: 10%;
+    margin-left: -25%;
+}
+
+.bottom_p {
+    font-size: 0.9vw;
+    margin-top: 3%;
+}
+
+.change-btn {
+    margin-left: 0%;
+}
+
+.bg-icon {
+    width:20%;
+}
+
+.change-icon {
+    margin-top: -63%; 
+    margin-left: -15%;
+    width: 130%;
+}
+
+.option-icon img {
+    width: 110%;
+    display: flex;
+    margin-left: -10%;
+}
+
+.menu-ul2{
+    list-style-type: none;
+    margin-left: 91%;
+    font-family: Ruda;
+    font-size: 1.3vw;
+    color: var(--eduguide_blue);
+}
