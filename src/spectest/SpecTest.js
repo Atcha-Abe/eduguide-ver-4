@@ -16,7 +16,7 @@ export default class SpecTest extends Component {
                 most of the applications?</p>
 
                 <table>
-                    <tr align="center">
+                    <tr align="left">
                         <td>
                             <input type="radio" className="spec-input"/>
                             <label className="spec-label">2GB
@@ -28,7 +28,7 @@ export default class SpecTest extends Component {
                             </label>
                         </td>
                     </tr>
-                    <tr align="center">
+                    <tr align="left">
                         <td>
                             <input type="radio" className="spec-input"/>
                             <label className="spec-label">3GB
