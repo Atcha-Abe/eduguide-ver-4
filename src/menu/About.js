@@ -28,7 +28,7 @@ export default class About extends Component {
                         <img src="./icons/Line.png" className="line"></img>
                     <table className="intro-edu">
                         <tr>
-                            <td>
+                            <td className="intro-col">
                                 <h1>Take the test </h1> 
                                 <p>Provided with two diagnostic tests: <br></br>Generalized and Specialized test 
                                 <br></br> 
@@ -39,16 +39,16 @@ export default class About extends Component {
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td className="intro-col">
                                 <h1>Choose your <br></br> program </h1> 
                                 <p>With over 17 programs, test yourself and see where your preferences and strengths tie in with them. </p>
                             </td>
                             <td>
-                            <img src="./images/Choose.jpeg" className="img-about"></img>
+                                <img src="./images/Choose.jpeg" className="img-about"></img>
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td className="intro-col">
                                 <h1>Decide your future</h1> 
                                 <p>Once that you have received your results, choose the path that you are the most comfortable with and pave your way towards the future for a better tomorrow.</p>
                             </td>

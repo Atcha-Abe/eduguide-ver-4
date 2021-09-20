@@ -14,6 +14,13 @@ import Welcome from './account/Welcome'
 import MainProfile from './account/MainProfile'
 import EditProfile from './account/EditProfile'
 import ChangeIcon from './account/ChangeIcon'
+import ChangePass from './account/ChangePass'
+import TestResults from './account/TestResults'
+import GenTest from './generaltest/GenTest'
+import GenResults from './generaltest/GenResults'
+import GenCourses from './generaltest/GenCourses'
+import SpecTest from './spectest/SpecTest'
+import SpecResults from './spectest/SpecResults'
 import Footer from  './components/Footer'
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -36,6 +43,13 @@ class App extends Component{
                 <Route exact path="/mainprofile" component={MainProfile} />
                 <Route exact path="/editprofile" component={EditProfile} />
                 <Route exact path="/changeicon" component={ChangeIcon} />
+                <Route exact path="/changepass" component={ChangePass} />
+                <Route exact path="/testresults" component={TestResults} />
+                <Route exact path="/gentest" component={GenTest} />
+                <Route exact path="/genresults" component={GenResults} />
+                <Route exact path="/gencourses" component={GenCourses} />
+                <Route exact path="/spectest" component={SpecTest} />
+                <Route exact path="/specresults" component={SpecResults} />
                 <Route exact path="/welcome" component={Welcome} />
                 <div className="push"></div> 
                 <Footer />

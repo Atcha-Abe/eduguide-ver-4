@@ -4,10 +4,11 @@ import "./Account.css";
 import {
     Link
   } from 'react-router-dom'
-export default class Contact extends Component {
+export default class LogIn extends Component {
     render() {
 
         return (
+            <body>
             <div align="center">
                 <h1>
                     Log In
@@ -33,6 +34,7 @@ export default class Contact extends Component {
                 <Link to="/welcome" className="reg-btn" value="Log In">Log In</Link>
                 <p>Don't have an account yet? <br></br> <br></br> Sign Up <b><Link to="/signup" style={{ textDecoration: 'none' }}>here</Link></b></p>
             </div>
+            </body>
         )
     }
 }

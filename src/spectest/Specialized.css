@@ -1,0 +1,23 @@
+.spec-label {
+    color: var(--eduguide_blue);
+}
+
+
+.spec-row {
+    width: 20%;
+    margin-left: -5%;
+}
+
+.spec-title {
+    background-color: var(--eduguide_orange);
+    border: none;
+    border-radius: 3vw;
+    font-weight: bold;
+    width: 160%;
+    padding-top: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    margin-bottom: 2%;
+}
+

@@ -3,7 +3,8 @@ import "./Menu.css";
 import Card from '../container/Card'
 import {
     BrowserRouter as Router,
-    Route
+    Route,
+    Link
   } from 'react-router-dom'
 export default class Home extends Component {
     render() {
@@ -18,8 +19,9 @@ export default class Home extends Component {
             <p className="small-text">
             Disclaimer: This tool  only includes 17 programs offered by St. Paul University Manila.
             </p>
-
-            <button type="submit"> Take the Test </button>
+            <br></br>
+            <br></br>
+            <Link to="/login" className="test-btn" value="submit">Take the Test</Link>
             <br></br>
             <br></br>
             <Router>

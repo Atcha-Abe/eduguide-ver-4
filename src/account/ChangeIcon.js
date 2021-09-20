@@ -16,7 +16,7 @@ export default class ChangeIcon extends Component {
                         </div>
                         </div>
                         <div className="option-icon"> 
-                            <table>
+                            <table className="icons">
                                 <tr>
                                     <td ><img src="./icons/icon 2.png"></img></td>
                                     <td ><img src="./icons/icon 3.png"></img></td>
@@ -30,8 +30,8 @@ export default class ChangeIcon extends Component {
                             </table>
                         </div>
                     <div className="change-btn">
-                        <Link to="/save" className="reg-btn" value="Edit">Save Changes</Link>
-                        <Link to="/editprofile" className="reg-btn" value="Show Test Results">Cancel</Link>
+                        <Link to="/save" className="reg-btn" value="Save">Save Changes</Link>
+                        <Link to="/EditProfile" className="reg-btn" value="Cancel">Cancel</Link>
                     </div>
                 <p className="bottom_p"><b>Make the right decision.</b></p>
             </div>

@@ -19,7 +19,7 @@ export default class Welcome extends Component {
             </h1>
             <br></br>
             <br></br>
-            <button type="submit"> Take the Test </button>
+            <Link to="/gentest" className="test-btn" value="submit">Take the Test</Link>
             <Router>
                     <Route path="/mainprofile" component={MainProfile} />
              </Router>

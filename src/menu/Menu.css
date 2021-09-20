@@ -119,7 +119,7 @@ h6 {
     width: 4.5%;
 }
 
-button {
+.test-btn {
     font-size: 1.55vw;
     background-color: var(--eduguide_blue);
     color: var(--eduguide_orange);
@@ -127,10 +127,14 @@ button {
     border: none;
 }
 .intro-edu {
-    margin-left: -30%;
-    width: max-content;
+    width: 60%;
+}
+
+.intro-col {
+    width:58%;
 }
 
 .img-about {
-    width: 5%;
+    width:100%;
+    height: 100%;
 }

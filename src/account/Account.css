@@ -4,16 +4,30 @@
     margin-left: 40%;
 }
 
+.edit-form{
+    font-size: 1.55vw;
+    color:  var(--eduguide_blue);
+    margin-left: -10%;
+}
+
+.pass-form{
+    margin-top: 5%;
+    color:  var(--eduguide_blue);
+    margin-left: -11%;
+}
+
 label {
+    font-family: Ruda;
+    font-size: 2vw;
     margin-left: -9%;
 }
 form {
     margin-bottom: 1vw;
 }
+
 .field {
     font-family: Ruda;
     font-size: 1.55vw;
-    color:  var(--eduguide_blue);
     margin-left: 12%;
     margin-bottom: -1vw;
     margin-top: -5%;
@@ -24,6 +38,32 @@ form {
     width: 30%;
     display:list-item;
 }
+
+.edit-field {
+    font-family: Ruda;
+    color:  var(--eduguide_blue);
+    font-size: 1.55vw;
+    margin-left: 45%;
+    margin-bottom: -1vw;
+    margin-top: -20%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-width:unset;
+    width: 100%;
+    display:list-item;
+}
+
+.pass-field {
+    color:  var(--eduguide_blue);
+    margin-left: 17%;
+    margin-bottom: -1vw;
+    margin-top: -2%;
+    border-width:unset;
+    width: 15%;
+    display:list-item;
+}
+
 
 .reg-btn {
     font-size: 1.65vw;
@@ -37,15 +77,27 @@ form {
 }
 
 h3 {
-    font-size: 1vw;
+    margin-top: 3%;
+    font-size: 1.30vw;
     color: var(--eduguide_blue);
     text-align: center;
     margin-bottom: 0.5%;
 }
 
 .profile-btn {
-    margin-top: 10%;
-    margin-left: -25%;
+    margin-top: 3%;
+    margin-left: 23%;
+    margin-bottom: 5%;
+}
+
+.pass-btns {
+    margin-top: 4%;
+    margin-bottom: 5%;
+}
+
+.result-btn {
+    margin-top: 4%;
+    margin-bottom: 5%;
 }
 
 .bottom_p {
@@ -70,7 +122,7 @@ h3 {
 .option-icon img {
     width: 110%;
     display: flex;
-    margin-left: -10%;
+    margin-left: -140%;
 }
 
 .menu-ul2{
@@ -79,4 +131,43 @@ h3 {
     font-family: Ruda;
     font-size: 1.3vw;
     color: var(--eduguide_blue);
+}
+
+.edit-iconbg {
+    width: 100%;
+    margin-top: -05%;
+}
+
+.edit-icon {
+    width: 140%;
+    margin-top: -65.5%;
+    margin-left: -11.7%;
+}
+
+.profile-table, .edit-table {
+    margin-left: 25%;
+}
+
+.icons {
+    margin-left: 31%;
+}
+
+.results {
+    font-family: Ruda;
+    color:  var(--eduguide_blue);
+    font-size: 1.55vw;
+    width: 50%;
+    margin-top: 5%;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.blue {
+    color:  var(--eduguide_blue);
+    font-size: 1.2vw;
+}
+
+.orange {
+    color:  var(--eduguide_orange);
+    font-size: 1.2vw;
 }
