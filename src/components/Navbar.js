@@ -90,7 +90,7 @@ function NavBar() {
               </li>
             ) : (
               <li>
-                <Link to="/logout" className="login-item">
+                <Link to="/signup" className="login-item">
                   Sign Up
                 </Link>
               </li>

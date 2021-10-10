@@ -19,18 +19,16 @@ p {
 }
 
 .about__link {
-  list-style: none;
   cursor: pointer;
-  font-size: 1.5vw;
+  font-size: 2vw;
   transition: 0.2s;
   text-decoration: none;
   margin-top: -9vw;
-  margin-left: 12.5vw;
-  color: #f19336;
+  color: white;
 }
 
 .about__link:hover {
-  color: var(--eduguide_blue);
+  color: #f19336;
 }
 
 .devs img {
@@ -157,22 +155,109 @@ h6 {
   padding: 6px;
 }
 
-.comm-field {
+.commfield {
   font-size: 1.2vw;
   color: var(--eduguide_blue);
-  width: 100%;
-  height: 2em;
+  width: 60%;
+  height: 60%;
   border: thin;
   border-color: var(--eduguide_blue);
   border-style: solid;
   text-align: initial;
+  margin-left: -40px;
 }
 
 .commdiv {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .commicon {
-  width: 190px;
+  width: 140px;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+.postbtn {
+  cursor: pointer;
+  font-size: 1.5vw;
+  transition: 0.2s;
+  text-decoration: none;
+  color: var(--eduguide_blue);
+  background-color: white;
+  border: none;
+  margin-left: 620px;
+}
+
+.postbtn:hover {
+  color: var(--eduguide_orange);
+}
+
+.commentbtn {
+  cursor: pointer;
+  font-size: 1.5vw;
+  transition: 0.2s;
+  text-decoration: none;
+  color: var(--eduguide_blue);
+  background-color: white;
+  border: none;
+  margin-left: 120px;
+}
+
+.commentbtn:hover {
+  color: var(--eduguide_orange);
+}
+
+.sharebtn {
+  cursor: pointer;
+  font-size: 1.5vw;
+  transition: 0.2s;
+  text-decoration: none;
+  color: var(--eduguide_blue);
+  background-color: white;
+  border: none;
+  margin-left: 10px;
+}
+
+.sharebtn:hover {
+  color: var(--eduguide_orange);
+}
+
+.deletebtn {
+  cursor: pointer;
+  font-size: 1.5vw;
+  transition: 0.2s;
+  text-decoration: none;
+  color: var(--eduguide_blue);
+  background-color: white;
+  border: none;
+  margin-left: 320px;
+}
+
+.deletebtn:hover {
+  color: var(--eduguide_orange);
+}
+
+.comm_entry {
+  font-size: 1.2vw;
+  color: var(--eduguide_blue);
+  width: 60%;
+  height: 60%;
+  border: thin;
+  border-color: var(--eduguide_blue);
+  text-align: initial;
+  background: #ffc78f;
+  margin-left: -40px;
+}
+
+.about__table {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  text-align: center;
+}
+
+.about__box {
+  background-color: var(--eduguide_blue);
 }

@@ -1,14 +1,13 @@
-
-export const setAccountDetails = (username) => {
-    return ({
-        type: "HEADER_ACTION",
-        username,
-    })
+export const setAccountDetails = (username, password) => {
+  return {
+    type: "HEADER_ACTION",
+    username,
+    password,
+  };
 };
 
-
 export const logoutUser = () => {
-    return ({
-        type: "LOGOUT_ACTION",
-    })
+  return {
+    type: "LOGOUT_ACTION",
+  };
 };
