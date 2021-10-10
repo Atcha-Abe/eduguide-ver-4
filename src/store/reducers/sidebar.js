@@ -9,4 +9,4 @@ export const sidebar = (state = false, action) => {
             return state;
     }
 
-}
+}   

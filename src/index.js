@@ -5,12 +5,11 @@ import { store } from "./store/store";
 
 import App from "./App";
 
-
 const destination = document.querySelector(".root");
 
 ReactDOM.render(
-    <Provider store={store}> 
+  <Provider store={store}>
     <App />
-    </Provider>, 
-    destination
-)
+  </Provider>,
+  destination
+);
