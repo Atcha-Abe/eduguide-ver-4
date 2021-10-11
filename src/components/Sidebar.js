@@ -27,10 +27,26 @@ function Sidebar() {
             About
           </Link>
         </li>
-        <li className="sidebar__link">Blogs</li>
-        <li className="sidebar__link">FAQs</li>
-        <li className="sidebar__link">Community</li>
-        <li className="sidebar__link">Contact</li>
+        <li className="sidebar__link">
+          <Link to="/blogs" className="sidebar__link">
+            Blogs
+          </Link>
+        </li>
+        <li className="sidebar__link">
+          <Link to="/faqs" className="sidebar__link">
+            FAQs
+          </Link>
+        </li>
+        <li className="sidebar__link">
+          <Link to="/community" className="sidebar__link">
+            Community
+          </Link>
+        </li>
+        <li className="sidebar__link">
+          <Link to="/contact" className="sidebar__link">
+            Contact
+          </Link>
+        </li>
       </ul>
       <div className="sidebar__cancel">
         <ImCross onClick={() => handleClick()} />

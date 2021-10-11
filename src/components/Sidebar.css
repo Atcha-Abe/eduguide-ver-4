@@ -1,42 +1,43 @@
 .sidebar {
-    background-color: var(--eduguide_blue);
-    color: white;
-    position: fixed;
-    top: 0;
-    z-index: 2;
-    margin: -0vw;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: space-around;
-    transform: translateX(100vw);
+  background-color: var(--eduguide_blue);
+  color: white;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  margin: -0vw;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  transform: translateX(100vw);
 }
 
 .sidebar__link {
-    list-style: none;
-    font-size: 1.5vw;
-    padding: 15px;
-    cursor: pointer;
-    transition: 0.3s;
+  list-style: none;
+  font-size: 1.5vw;
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
 }
 
 .sidebar__link:hover {
-    color:var(--eduguide_orange);
-    transform: scale(1.10);
+  color: var(--eduguide_orange);
+  transform: scale(1.1);
 }
 
 .sidebar__cancel {
-    padding-top: 15px;
-    font-size: 3vw;
-    cursor: pointer; 
+  padding-top: 15px;
+  font-size: 3vw;
+  cursor: pointer;
 }
 
 #show-sidebar {
-    transform: translateX(0);
-    transition: .5s;
+  transform: translateX(0);
+  transition: 0.5s;
 }
 
 #hide-sidebar {
-    transform: translateX(100vw);
-    transition: .2s;
+  transform: translateX(100vw);
+  transition: 0.2s;
 }
