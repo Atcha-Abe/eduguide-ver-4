@@ -5,17 +5,17 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer>
-      <section>
-        <section className="Footer_Left">
-          <section>
+      
+          <section className="Footer-Fixing"> 
             <div align="center" className="foot_dev">
-              <img src="./icons/MessengerWhite.png"  className="social-icons"></img>
-              <img src="./icons/GMailWhite.png" className="social-icons"></img>
-              <p> All Rights Reserved 2021 </p>
+              <a href='https://messenger.com/'><img src="./icons/MessengerWhite.png"  className="footer-icons"></img></a>
+              <a href='https://www.google.com.ph/'><img src="./icons/GMailWhite.png" className="footer-icons"></img></a>
+            </div>
+            <div align="center">
+              <h6> All Rights Reserved </h6>
             </div>
           </section>
-        </section>
-      </section>
+       
     </footer>
   );
 }

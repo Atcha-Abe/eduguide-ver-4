@@ -9,29 +9,28 @@ footer {
     color: white;
     max-width: 150%;
     position: absolute;
-    bottom:0, inherit;
+    bottom:inherit;
+    margin-top: auto;
     width:100%;
     height: 20%;
+    background-size: cover; 
     margin-left: -4.1%;
+    
+}
+
+.footer-icons{
+    width: 3%;
+    height: 3%;
+    
+}
+
+h6{
+    color: white;
+    margin-top: 1rem;
 }
 
 
-.Footer_Left, .Footer_Center{
-    display: flex;
-    flex-direction: column;
-}
 
-.Footer_Table {
-    margin-left: 0.5%;
-}
 
-.rights {
-    text-align: center;
-}
-.foot_dev {
-    margin-left: 6%;
-}
 
-table {
-    width: 35%;
-}
+
