@@ -18,6 +18,7 @@ function LogIn() {
   const handleChange = (event) => {
     setUserDetails(event.target.value);
   };
+
   return (
     <body>
       <div align="center">

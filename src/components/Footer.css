@@ -1,36 +1,23 @@
 * {
-    font-family: Ruda;
-    font-size: 0.95vw;
-    margin-bottom: 0%;
+  font-family: Ruda;
+  font-size: 0.95vw;
+  margin-bottom: 0%;
 }
 
 footer {
-    background-color: var(--eduguide_blue);
-    color: white;
-    max-width: 150%;
-    position: absolute;
-    bottom:inherit;
-    margin-top: auto;
-    width:100%;
-    height: 20%;
-    background-size: cover; 
-    margin-left: -4.1%;
-    
+  background-color: var(--eduguide_blue);
+  color: white;
+  max-width: 150%;
+  position: absolute;
+  bottom: inherit;
+  margin-top: auto;
+  width: 100%;
+  height: 20%;
+  background-size: cover;
+  margin-left: -4.1%;
 }
 
-.footer-icons{
-    width: 3%;
-    height: 3%;
-    
+.footer-icons {
+  width: 3%;
+  height: 3%;
 }
-
-h6{
-    color: white;
-    margin-top: 1rem;
-}
-
-
-
-
-
-
