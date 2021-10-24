@@ -9,23 +9,21 @@ export default class GenTest extends Component {
         <h3>Career Decision Support General Test</h3>
         <br></br>
         <div className="question">
-          <input type="checkbox" className="gen-input" />
           <label className="gen-label">
-            Do you like Computers?
+            How interested are you in Computers?
             <span class="checkmark"></span>
           </label>
-          <div className="options" align="left">
+          <div align="center">
             <input type="radio" className="gen-input" />
-            <label className="gen-label">Programming</label>
-            <br></br>
+            <label className="gen-label">1</label>
             <input type="radio" className="gen-input" />
-            <label className="gen-label">Video Editing</label>
-            <br></br>
+            <label className="gen-label">2</label>
             <input type="radio" className="gen-input" />
-            <label className="gen-label">Gaming</label>
-            <br></br>
+            <label className="gen-label">3</label>
             <input type="radio" className="gen-input" />
-            <label className="gen-label">Building</label>
+            <label className="gen-label">4</label>
+            <input type="radio" className="gen-input" />
+            <label className="gen-label">5</label>
           </div>
         </div>
         <div className="result-btn">

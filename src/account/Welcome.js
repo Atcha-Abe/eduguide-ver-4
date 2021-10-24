@@ -58,7 +58,7 @@ function Welcome() {
       </div>
       <br />
       <br />
-      <Link to="/gentest" className="test-btn" value="submit">
+      <Link to="/gendesc" className="test-btn" value="submit">
         Take the Test
       </Link>
     </div>

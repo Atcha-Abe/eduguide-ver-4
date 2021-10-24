@@ -23,8 +23,12 @@ import GenTest from "./generaltest/GenTest";
 import GenResults from "./generaltest/GenResults";
 import GenCourses from "./generaltest/GenCourses";
 import SpecDesc from "./spectest/SpecDesc";
-import SpecTest from "./spectest/SpecTest";
-import SpecResults from "./spectest/SpecResults";
+import SpecTest1 from "./spectest/SpecTest1";
+import SpecResults1 from "./spectest/SpecResults1";
+import SpecTest2 from "./spectest/SpecTest2";
+import SpecResults2 from "./spectest/SpecResults2";
+import SpecTest3 from "./spectest/SpecTest3";
+import SpecResults3 from "./spectest/SpecResults3";
 import Footer from "./components/Footer";
 
 class App extends Component {
@@ -52,8 +56,12 @@ class App extends Component {
           <Route exact path="/genresults" component={GenResults} />
           <Route exact path="/gencourses" component={GenCourses} />
           <Route exact path="/specdesc" component={SpecDesc} />
-          <Route exact path="/spectest" component={SpecTest} />
-          <Route exact path="/specresults" component={SpecResults} />
+          <Route exact path="/spectest1" component={SpecTest1} />
+          <Route exact path="/spectest2" component={SpecTest2} />
+          <Route exact path="/spectest3" component={SpecTest3} />
+          <Route exact path="/specresults1" component={SpecResults1} />
+          <Route exact path="/specresults2" component={SpecResults2} />
+          <Route exact path="/specresults3" component={SpecResults3} />
           <Route exact path="/welcome" component={Welcome} />
           <div className="push"></div>
           <Footer />

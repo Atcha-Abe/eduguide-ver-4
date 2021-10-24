@@ -61,12 +61,12 @@ export default class GenCourses extends Component {
               </Link>
             </td>
             <td>
-              <Link to="/share" className="courses-btn" value="Cancel">
+              <Link to="/specdesc" className="courses-btn" value="Cancel">
                 Take Information Technology test
               </Link>
             </td>
             <td>
-              <Link to="/share" className="courses-btn" value="Cancel">
+              <Link to="/specdesc" className="courses-btn" value="Cancel">
                 Take Hotel and Restaurant Management test
               </Link>
             </td>

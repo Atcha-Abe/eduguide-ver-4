@@ -9,12 +9,16 @@ export default class GenDesc extends Component {
         <h1>Career Decision Support General Test</h1>
         <br></br>
         <p class="gen-deschead">
-          The Career Decision Support General Test will guide the student in
-          identifying their strengths and interest in relation to the
-          specialization of the 17 programs offered of St. Paul University
-          Manila. There are a total of 10 questions provided and each question
-          includes a rating scale from 1-5 (5 being the highest) and will be
-          considered as an answer resulting to the top 3 programs.
+          The Career Decision Support General Test is the first test that will
+          guide the student in identifying their strengths and interest in
+          relation to the specialization of the 17 programs offered of St. Paul
+          University Manila. There are a total of 10 questions provided and each
+          question includes a rating scale from 1-5 (5 being the highest) and
+          will be considered as an answer resulting to the top 3 recommended
+          programs.
+          <br></br>
+          <br></br>
+          This test will take 10 minutes to accomplish.
         </p>
         <div align="center">
           <label className="gen-desc">

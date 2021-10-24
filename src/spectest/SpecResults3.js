@@ -22,6 +22,11 @@ export default class SpecResults extends Component {
           <Link to="/share" className="reg-btn" value="Next">
             Share Results
           </Link>
+          <br></br>
+          <br></br>
+          <Link to="/share" className="reg-btn" value="Next">
+            Take the next test
+          </Link>
         </div>
         <p className="bottom_p">
           <b>Make the right decision.</b>

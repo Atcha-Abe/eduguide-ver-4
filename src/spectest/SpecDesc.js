@@ -9,11 +9,14 @@ export default class SpecDesc extends Component {
         <h1>Career Decision Support Specialized Test</h1>
         <br></br>
         <p class="spec-deschead">
-          The Career Decision Support Specialized test is based on the General
-          Test results. Each specialization test is optimized with more specific
-          questions related to the program. There are a total of 10 questions
-          provided and the highest score among the three specialization test is
-          the most recommended program.
+          The Career Decision Support Specialized test is the second test based
+          on the General Test results. Each specialization test is optimized
+          with more specific questions related to the program. There are a total
+          of 10 questions provided and the highest score among the three
+          specialization test is the most recommended program.
+          <br></br>
+          <br></br>
+          This test will take 10 minutes to accomplish.
         </p>
         <div align="center">
           <label className="spec-desc">
@@ -29,7 +32,7 @@ export default class SpecDesc extends Component {
         </div>
         <br></br>
         <br></br>
-        <Link to="/spectest" className="test-btn" value="submit">
+        <Link to="/spectest1" className="test-btn" value="submit">
           Take the Test
         </Link>
         <p className="bottom_p">
