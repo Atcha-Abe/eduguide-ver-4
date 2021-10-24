@@ -27,7 +27,7 @@ function Home() {
       <br></br>
       <Router>
         <Route path="/articles" component={Card} />
-        <div align="center">
+        <div>
           <a
             href="https://www.cioinsight.com/careers/it-top-paying-jobs/"
             target="_blank"

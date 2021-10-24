@@ -1,29 +1,31 @@
-.card-container{
-    width:25%;
-    overflow: hidden;
-    box-shadow: 0px 0px 15px -4px;
-    transition: 0.5s;
-    animation: ease-in-out;
+.card-container {
+  width: 25%;
+  overflow: hidden;
+  float: left;
+  box-shadow: 0px 0px 15px -4px;
+  transition: 0.5s;
+  animation: ease-in-out;
+  margin-left: 3.99%;
+  margin-right: 2%;
 }
 .card-container:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 15px 0px;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px 0px;
 }
-.image-container img{
-    overflow: hidden;
-    margin: 1vw;
-    width:15vw;
-    height: 11vw;
+.image-container img {
+  overflow: hidden;
+  margin: 1vw;
+  width: 15vw;
+  height: 11vw;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .card-text {
-    font-family: Ruda;
-    font-size: 1vw;
-    color: #16367C;
-    text-align: center;
+  font-family: Ruda;
+  font-size: 1vw;
+  color: #16367c;
+  text-align: center;
 }
-

@@ -7,7 +7,7 @@ function TestResults() {
   const header = useSelector((state) => state.header);
   return (
     <div align="center">
-      <h3>{header}'s Test Results</h3>
+      <h3> {header}'s Test Results</h3>
       <table className="results">
         <tr>
           <td className="blue">General Test</td>
