@@ -8,7 +8,7 @@ h1 {
 }
 p {
   font-family: Ruda;
-  font-size: 1.50vw;
+  font-size: 1.5vw;
   color: var(--eduguide_blue);
   text-align: center;
   margin-top: 2.5%;
@@ -90,7 +90,7 @@ h6 {
   font-size: 1.65vw;
   color: var(--eduguide_blue);
   margin-top: 2.5%;
-  width: 40%;
+  width: 70%;
   height: 3em;
   border: thick;
   border-color: var(--eduguide_blue);
@@ -106,7 +106,7 @@ h6 {
 .contact-field {
   font-size: 1.65vw;
   color: var(--eduguide_blue);
-  width: 25%;
+  width: 60%;
   height: 5em;
   border: thick;
   border-color: var(--eduguide_blue);

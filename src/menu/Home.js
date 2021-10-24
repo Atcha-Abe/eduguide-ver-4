@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import "./Menu.css";
 import Card from "../container/Card";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Home() {
+  const header = useSelector((state) => state.header);
   return (
     <div align="center">
       <h1>Decide your future.</h1>
@@ -19,9 +21,15 @@ function Home() {
       <br></br>
       <br></br>
 
-      <Link to="/gentest" className="test-btn" value="submit">
-        Take the Test
-      </Link>
+      {header ? (
+        <Link to="/gendesc" className="test-btn" value="submit">
+          Take the Test
+        </Link>
+      ) : (
+        <Link to="/login" className="test-btn" value="submit">
+          Take the Test
+        </Link>
+      )}
 
       <br></br>
       <br></br>

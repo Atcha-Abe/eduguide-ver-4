@@ -18,9 +18,11 @@ import EditProfile from "./account/EditProfile";
 import ChangeIcon from "./account/ChangeIcon";
 import ChangePass from "./account/ChangePass";
 import TestResults from "./account/TestResults";
+import GenDesc from "./generaltest/GenDesc";
 import GenTest from "./generaltest/GenTest";
 import GenResults from "./generaltest/GenResults";
 import GenCourses from "./generaltest/GenCourses";
+import SpecDesc from "./spectest/SpecDesc";
 import SpecTest from "./spectest/SpecTest";
 import SpecResults from "./spectest/SpecResults";
 import Footer from "./components/Footer";
@@ -45,9 +47,11 @@ class App extends Component {
           <Route exact path="/changeicon" component={ChangeIcon} />
           <Route exact path="/changepass" component={ChangePass} />
           <Route exact path="/testresults" component={TestResults} />
+          <Route exact path="/gendesc" component={GenDesc} />
           <Route exact path="/gentest" component={GenTest} />
           <Route exact path="/genresults" component={GenResults} />
           <Route exact path="/gencourses" component={GenCourses} />
+          <Route exact path="/specdesc" component={SpecDesc} />
           <Route exact path="/spectest" component={SpecTest} />
           <Route exact path="/specresults" component={SpecResults} />
           <Route exact path="/welcome" component={Welcome} />

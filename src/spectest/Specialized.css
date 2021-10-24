@@ -1,27 +1,42 @@
 .spec-label {
-    color: var(--eduguide_blue);
+  color: var(--eduguide_blue);
 }
 
+.spec-desc {
+  color: var(--eduguide_orange);
+  font-size: 1.5vw;
+  width: auto;
+  height: auto;
+  margin-left: 0%;
+}
+
+.spec-deschead {
+  color: var(--eduguide_blue);
+  font-size: 1.8vw;
+  width: auto;
+  height: auto;
+  font-weight: bold;
+}
 
 .spec-row {
-    width: 20%;
-    margin-left: -5%;
+  width: 20%;
+  margin-left: -5%;
 }
 
 .spec-title {
-    background-color: var(--eduguide_orange);
-    border: none;
-    border-radius: 3vw;
-    font-weight: bold;
-    width: 160%;
-    padding-top: 5%;
-    padding-right: 5%;
-    padding-bottom: 5%;
-    padding-left: 5%;
-    margin-bottom: 2%;
+  background-color: var(--eduguide_orange);
+  border: none;
+  border-radius: 3vw;
+  font-weight: bold;
+  width: 160%;
+  padding-top: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  margin-bottom: 2%;
 }
 
 .spec-input {
-    margin-left: 20%;
-    width: 20%;
+  margin-left: 20%;
+  width: 20%;
 }

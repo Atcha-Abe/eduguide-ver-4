@@ -1,86 +1,100 @@
 h3 {
-    margin-top: 3%;
-    font-size: 1.30vw;
-    color: var(--eduguide_blue);
-    text-align: center;
-    margin-bottom: 0.5%;
+  margin-top: 3%;
+  font-size: 1.3vw;
+  color: var(--eduguide_blue);
+  text-align: center;
+  margin-bottom: 0.5%;
 }
 .question {
-    background-color: var(--eduguide_blue);
-    color:white;
-    padding-top: 2%;
-    padding-right: 2%;
-    padding-bottom: 2%;
-    padding-left: 2%;
+  background-color: var(--eduguide_blue);
+  color: white;
+  padding-top: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  padding-left: 2%;
 }
 
 .gen-label {
-    margin-left: 1%;
-    color:white;
+  margin-left: 1%;
+  color: white;
 }
 
+.gen-desc {
+  color: var(--eduguide_orange);
+  font-size: 1.5vw;
+  width: auto;
+  height: auto;
+  margin-left: 0%;
+}
+
+.gen-deschead {
+  color: var(--eduguide_blue);
+  font-size: 1.8vw;
+  width: auto;
+  height: auto;
+  font-weight: bold;
+}
 
 .gen-input {
-    background-color: var(--eduguide_orange);
+  background-color: var(--eduguide_orange);
 }
 
 .options {
-    margin-left: 40%;
+  margin-left: 40%;
 }
 
 h2 {
-    font-size: 2.05vw;
-    color: var(--eduguide_blue);
+  font-size: 2.05vw;
+  color: var(--eduguide_blue);
 }
 
 .test-title {
-    background-color: var(--eduguide_orange);
-    border: none;
-    border-radius: 3vw;
-    font-weight: bold;
-    width: 50%;
-    padding-top: 1%;
-    padding-right: 1%;
-    padding-bottom: 1%;
-    padding-left: 1%;
-    margin-bottom: 2%;
+  background-color: var(--eduguide_orange);
+  border: none;
+  border-radius: 3vw;
+  font-weight: bold;
+  width: 50%;
+  padding-top: 1%;
+  padding-right: 1%;
+  padding-bottom: 1%;
+  padding-left: 1%;
+  margin-bottom: 2%;
 }
 
 .courses-title {
-    background-color: var(--eduguide_blue);
-    color: white;
-    border: none;
-    border-radius: 3vw;
-    font-weight: bold;
-    width: 70%;
-    padding-top: 1.5%;
-    padding-right: 1.5%;
-    padding-bottom: 1.5%;
-    padding-left: 1.5%;
-    margin-bottom: 1.5%;
+  background-color: var(--eduguide_blue);
+  color: white;
+  border: none;
+  border-radius: 3vw;
+  font-weight: bold;
+  width: 70%;
+  padding-top: 1.5%;
+  padding-right: 1.5%;
+  padding-bottom: 1.5%;
+  padding-left: 1.5%;
+  margin-bottom: 1.5%;
 }
 
 .courses-column {
-    font-size: 0.2vw;
-    width: 10%;
+  font-size: 0.2vw;
+  width: 10%;
 }
 
-
 .courses-btn {
-    background-color: var(--eduguide_orange);
-    color: var(--eduguide_blue);
-    border: none;
-    border-radius: 3vw;
-    font-weight: bold;
-    width: 70%;
-    padding-top: 2%;
-    padding-right: 2%;
-    padding-bottom: 2%;
-    padding-left: 2%;
-    margin-bottom: 2%;
-    font-size: 1.2vw;
+  background-color: var(--eduguide_orange);
+  color: var(--eduguide_blue);
+  border: none;
+  border-radius: 3vw;
+  font-weight: bold;
+  width: 70%;
+  padding-top: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  padding-left: 2%;
+  margin-bottom: 2%;
+  font-size: 1.2vw;
 }
 
 .course-table {
-    width: 100%;
+  width: 100%;
 }
