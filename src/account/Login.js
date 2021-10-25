@@ -1,10 +1,19 @@
 import React, { Component, useState } from "react";
 import "./Account.css";
-
+import GLogin from './GLogin';
+import GLogout from './GLogout';
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { logoutUser, setAccountDetails } from "../store/actions/header";
+import GoogleLogin from "react-google-login";
+import {
+  button,
+  buttonText,
+  icon
+} from './GLogin.css'
+
+
 
 function LogIn() {
   const dispatch = useDispatch();
@@ -19,6 +28,9 @@ function LogIn() {
     setUserDetails(event.target.value);
   };
 
+    
+    
+  
   return (
     <body>
       <div align="center">
@@ -41,12 +53,6 @@ function LogIn() {
             <input type="password" className="field" name="password" />
           </label>
         </form>
-        <p>Log In with</p>
-        <div align="center">
-          <img src="./icons/Google.png" className="social-icons"></img>
-          <img src="./icons/Facebook.png" className="social-icons"></img>
-        </div>
-        <br></br>
         <Link
           to="/welcome"
           className="reg-btn"
@@ -55,6 +61,18 @@ function LogIn() {
         >
           Log In
         </Link>
+
+        <p>Log In with</p>
+        <div align="center">
+        <GLogin />
+        <GLogout />
+      
+
+          
+          
+        </div>
+        <br></br>
+        
         <p>
           Don't have an account yet? <br></br> <br></br> Sign Up{" "}
           <b>
