@@ -1,6 +1,8 @@
 import React, { Component, useState } from "react";
 import "./Account.css";
 
+import GLogin from "./GLogin";
+import GLogout from "./GLogout";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
@@ -41,10 +43,6 @@ function AdminLogIn() {
             <input type="password" className="field" name="password" />
           </label>
         </form>
-        <p>Log In with</p>
-        <div align="center">
-          <img src="./icons/Google.png" className="social-icons"></img>
-        </div>
         <br></br>
         <Link
           to="/welcome"
@@ -54,6 +52,13 @@ function AdminLogIn() {
         >
           Log In
         </Link>
+
+        <p>Log In with</p>
+        <div align="center">
+          <GLogin />
+          <GLogout />
+        </div>
+        <br></br>
         <p>
           Don't have an account yet? <br></br> <br></br> Sign Up{" "}
           <b>
