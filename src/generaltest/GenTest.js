@@ -8,6 +8,8 @@ export default class GenTest extends Component {
       <div align="center">
         <h3>Career Decision Support General Test</h3>
         <br></br>
+        <p className="ques-count">Question 1 out of 10</p>
+        <br></br>
         <div className="question">
           <label className="gen-label">
             How interested are you in Computers?

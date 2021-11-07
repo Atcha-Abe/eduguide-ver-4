@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { logoutUser, setAccountDetails } from "../store/actions/header";
 
-function LogIn() {
+function AdminLogIn() {
   const dispatch = useDispatch();
 
   const [userDetails, setUserDetails] = useState("");
@@ -22,7 +22,7 @@ function LogIn() {
   return (
     <body>
       <div align="center">
-        <h1>Log In</h1>
+        <h1>Admin Log In</h1>
         <img src="./icons/Line.png" className="line"></img>
         <form align="left" className="sign-form">
           <label>
@@ -61,18 +61,10 @@ function LogIn() {
               here
             </Link>
           </b>
-          <br></br>
-          <br></br>
-          Log in as
-          <b>
-            <Link to="/adminlogin" style={{ textDecoration: "none" }}>
-              Admin
-            </Link>
-          </b>
         </p>
       </div>
     </body>
   );
 }
 
-export default LogIn;
+export default AdminLogIn;

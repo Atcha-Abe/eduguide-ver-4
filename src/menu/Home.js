@@ -14,10 +14,6 @@ function Home() {
         in finding the right program corresponding to your strengths, interest,
         and skills.
       </p>
-      <p className="small-text">
-        Disclaimer: This tool only includes 17 programs offered by St. Paul
-        University Manila.
-      </p>
       <br></br>
       <br></br>
 

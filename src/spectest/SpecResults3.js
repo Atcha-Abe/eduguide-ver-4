@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import "./Specialized.css";
 
 import { Link } from "react-router-dom";
-export default class SpecResults extends Component {
+export default class SpecResults3 extends Component {
   render() {
     return (
       <div align="center">
-        <h3>Computer Science Specialized Test</h3>
+        <h3>Hotel and Restaurant Management Specialized Test</h3>
         <br></br>
         <table className="spec-row">
           <tr>
@@ -24,7 +24,7 @@ export default class SpecResults extends Component {
           </Link>
           <br></br>
           <br></br>
-          <Link to="/share" className="reg-btn" value="Next">
+          <Link to="/spectest1" className="reg-btn" value="Next">
             Take the next test
           </Link>
         </div>

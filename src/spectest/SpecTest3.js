@@ -8,6 +8,8 @@ export default class SpecTest3 extends Component {
       <div align="center">
         <h3>Hotel and Restaurant Management Specialized Test</h3>
         <br></br>
+        <p className="ques-count">Question 1 out of 10</p>
+        <br></br>
 
         <p className="test-title">Select the secure url.</p>
 

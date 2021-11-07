@@ -52,7 +52,6 @@ function SignUp() {
       <p>Sign Up with</p>
       <div align="center">
         <img src="./icons/Google.png" className="social-icons"></img>
-        <img src="./icons/Facebook.png" className="social-icons"></img>
       </div>
       <br></br>
       <Link to="/login" className="reg-btn" value="Sign Up">

@@ -11,6 +11,7 @@ import FAQs from "./menu/FAQs";
 import Community from "./menu/Community";
 import Contact from "./menu/Contact";
 import Login from "./account/Login";
+import AdminLogin from "./account/AdminLogin";
 import Signup from "./account/SignUp";
 import Welcome from "./account/Welcome";
 import MainProfile from "./account/MainProfile";
@@ -45,6 +46,7 @@ class App extends Component {
           <Route exact path="/community" component={Community} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/adminlogin" component={AdminLogin} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/mainprofile" component={MainProfile} />
           <Route exact path="/editprofile" component={EditProfile} />

@@ -8,6 +8,8 @@ export default class SpecTest1 extends Component {
       <div align="center">
         <h3>Computer Science Specialized Test</h3>
         <br></br>
+        <p className="ques-count">Question 1 out of 10</p>
+        <br></br>
 
         <p className="test-title">Select the secure url.</p>
 
