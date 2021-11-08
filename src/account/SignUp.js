@@ -4,7 +4,7 @@ import "./Account.css";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setAccountDetails } from "../store/actions/header";
-import { CREATE_USER } from "../Graphql/Mutation";
+import { CREATE_USER } from "../account/Graphql/Mutation";
 import { useMutation } from "@apollo/client";
 
 function SignUp() {
@@ -15,6 +15,12 @@ function SignUp() {
   const [levelStrand, setLevelStrand] = useState("");
   const [school, setSchool] = useState("");
   const [password, setPassword] = useState("");
+
+  const [createUser, { error }] = useMutation(CREATE_USER);
+
+  if (error) {
+    return <h1> {error} </h1>;
+  }
 
   const handleChange = (event) => {
     setUserDetails(event.target.value);
@@ -43,7 +49,6 @@ function SignUp() {
             type="text"
             className="field"
             name="uname"
-            value={userDetails}
             onChange={(event) => {
               setUserName(event.target.value);
             }}
@@ -76,7 +81,14 @@ function SignUp() {
         <br></br>
         <label>
           <b> Password: </b>
-          <input type="password" className="field" name="password" />
+          <input
+            type="password"
+            className="field"
+            name="password"
+            onChange={(event) => {
+              setPassword(event.target.value);
+            }}
+          />
         </label>
       </form>
       <p>Sign Up with</p>

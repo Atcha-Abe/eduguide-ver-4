@@ -1,18 +1,22 @@
 import React, { Component, useState } from "react";
 import "./Account.css";
 import GLogin from "./GLogin";
-import GLogout from "./GLogout";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { logoutUser, setAccountDetails } from "../store/actions/header";
-import GoogleLogin from "react-google-login";
 import { button, buttonText, icon } from "./GLogin.css";
+import { USER_LOGIN } from "../account/Graphql/Mutation";
+import { useMutation } from "@apollo/client";
 
 function LogIn() {
   const dispatch = useDispatch();
 
   const [userDetails, setUserDetails] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const [userLogin, { error }] = useMutation(USER_LOGIN);
 
   const handleLogin = () => {
     dispatch(setAccountDetails(userDetails));
@@ -21,6 +25,10 @@ function LogIn() {
   const handleChange = (event) => {
     setUserDetails(event.target.value);
   };
+
+  if (error) {
+    return <h1> {error} </h1>;
+  }
 
   return (
     <body>
@@ -34,14 +42,26 @@ function LogIn() {
               type="text"
               className="field"
               name="uname"
-              value={userDetails}
-              onChange={handleChange}
+              onChange={
+                ((event) => {
+                  setUsername(event.target.value);
+                  setUserDetails(event.target.value);
+                },
+                handleChange)
+              }
             />
           </label>
           <br></br>
           <label>
             <b>Password:</b>
-            <input type="password" className="field" name="password" />
+            <input
+              type="password"
+              className="field"
+              name="password"
+              onChange={(event) => {
+                setPassword(event.target.value);
+              }}
+            />
           </label>
         </form>
         <br></br>
@@ -49,7 +69,17 @@ function LogIn() {
           to="/welcome"
           className="reg-btn"
           value="Log In"
-          onClick={handleLogin}
+          onClick={
+            (() => {
+              userLogin({
+                variables: {
+                  username: username,
+                  password: password,
+                },
+              });
+            },
+            handleLogin)
+          }
         >
           Log In
         </Link>
@@ -57,7 +87,6 @@ function LogIn() {
         <p>Log In with</p>
         <div align="center">
           <GLogin />
-          <GLogout />
         </div>
         <br></br>
 

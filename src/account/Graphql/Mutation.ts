@@ -1,14 +1,32 @@
-import { gql } from "@apollo/client";
+import gql from "graphql-tag";
 
 export const CREATE_USER = gql`
-  mutation createUser($email: String!, $username: String!, $levelStrand: String!, $school: String! $password: String!) {
-    createUser(email: $email, username: $username, levelStrand: $levelStrand, school: $school, password: $password) {
+  mutation createUser(
+    $email: String!
+    $username: String!
+    $levelStrand: String!
+    $school: String!
+    $password: String!
+  ) {
+    createUser(
+      email: $email
+      username: $username
+      levelStrand: $levelStrand
+      school: $school
+      password: $password
+    ) {
       id
       email
       username
       levelStrand
       school
     }
+  }
+`;
+
+export const USER_LOGIN = gql`
+  mutation updatePassword($username: String!, $password: String!) {
+    message
   }
 `;
 

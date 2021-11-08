@@ -13,9 +13,32 @@ export const CREATE_USER = {
     password: { type: GraphQLString },
   },
   async resolve(parent: any, args: any) {
-    const { email, username, levelStrand, password } = args;
-    await Users.insert({ email, username, levelStrand, password });
+    const { email, username, levelStrand, school, password } = args;
+    await Users.insert({ email, username, levelStrand, school, password });
     return args;
+  },
+};
+
+export const USER_LOGIN = {
+  type: MessageType,
+  args: {
+    username: { type: GraphQLString },
+    password: { type: GraphQLString },
+  },
+  async resolve(parent: any, args: any) {
+    const { username, password } = args;
+    const user = await Users.findOne({ username: username });
+
+    if (!user) {
+      throw new Error("USERNAME DOESNT EXIST");
+    }
+    const userPassword = user?.password;
+
+    if (password === userPassword) {
+      return { successful: true, message: "LOGIN SUCCESS!" };
+    } else {
+      throw new Error("WRONG PASSWORD!");
+    }
   },
 };
 

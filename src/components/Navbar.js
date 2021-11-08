@@ -84,7 +84,7 @@ function NavBar() {
 
             {header ? (
               <li>
-                <Link to="/signup" className="login-item" onClick={logoutClick}>
+                <Link to="/login" className="login-item" onClick={logoutClick}>
                   Log Out
                 </Link>
               </li>
