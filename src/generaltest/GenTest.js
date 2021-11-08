@@ -13,7 +13,6 @@ export default class GenTest extends Component {
         <div className="question">
           <label className="gen-label">
             How interested are you in Computers?
-            <span class="checkmark"></span>
           </label>
           <div align="center">
             <input type="radio" className="gen-input" />

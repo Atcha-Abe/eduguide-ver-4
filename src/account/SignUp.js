@@ -4,10 +4,17 @@ import "./Account.css";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setAccountDetails } from "../store/actions/header";
+import { CREATE_USER } from "../Graphql/Mutation";
+import { useMutation } from "@apollo/client";
 
 function SignUp() {
   const dispatch = useDispatch();
   const [userDetails, setUserDetails] = useState("");
+  const [email, setEmail] = useState("");
+  const [userName, setUserName] = useState("");
+  const [levelStrand, setLevelStrand] = useState("");
+  const [school, setSchool] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleChange = (event) => {
     setUserDetails(event.target.value);
@@ -20,7 +27,14 @@ function SignUp() {
       <form align="left" className="sign-form">
         <label>
           <b>Email:</b>
-          <input type="email" className="field" name="name" />
+          <input
+            type="email"
+            className="field"
+            name="name"
+            onChange={(event) => {
+              setEmail(event.target.value);
+            }}
+          />
         </label>
         <br></br>
         <label>
@@ -30,18 +44,34 @@ function SignUp() {
             className="field"
             name="uname"
             value={userDetails}
-            onChange={handleChange}
+            onChange={(event) => {
+              setUserName(event.target.value);
+            }}
           />
         </label>
         <br></br>
         <label>
           <b>Level/Strand:</b>
-          <input type="text" className="field" name="levelstrand" />
+          <input
+            type="text"
+            className="field"
+            name="levelstrand"
+            onChange={(event) => {
+              setLevelStrand(event.target.value);
+            }}
+          />
         </label>
         <br></br>
         <label>
           <b>School: </b>
-          <input type="text" className="field" name="school" />
+          <input
+            type="text"
+            className="field"
+            name="school"
+            onChange={(event) => {
+              setSchool(event.target.value);
+            }}
+          />
         </label>
         <br></br>
         <label>
@@ -54,7 +84,22 @@ function SignUp() {
         <img src="./icons/Google.png" className="social-icons"></img>
       </div>
       <br></br>
-      <Link to="/login" className="reg-btn" value="Sign Up">
+      <Link
+        to="/login"
+        className="reg-btn"
+        value="Sign Up"
+        onClick={() => {
+          createUser({
+            variables: {
+              email: email,
+              username: userName,
+              levelStrand: levelStrand,
+              school: school,
+              password: password,
+            },
+          });
+        }}
+      >
         Sign Up
       </Link>
       <p>
