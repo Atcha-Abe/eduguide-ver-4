@@ -32,6 +32,12 @@ export default class GenDesc extends Component {
             the test in accordance with the abovementioned Support Decision
             Integrity information.
           </label>
+          <br></br>
+          <label className="gen-desc">
+            <input type="checkbox" className="gen-input" />I accept receiving an
+            evaluation form via email to give feedback about the web
+            application.
+          </label>
         </div>
         <br></br>
         <br></br>
