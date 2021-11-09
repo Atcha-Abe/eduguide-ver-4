@@ -1,16 +1,15 @@
-import React from 'react';
-import { useGoogleLogin } from 'react-google-login';
-
+import React from "react";
+import { useGoogleLogin } from "react-google-login";
 
 // refresh token
-import { refreshTokenSetup } from '../utils/refreshToken';
+import { refreshTokenSetup } from "../utils/refreshToken";
 
 const clientId =
-  '921182133637-oottoaa9p4oej5p423r33rrsnrskne7m.apps.googleusercontent.com';
+  "921182133637-oottoaa9p4oej5p423r33rrsnrskne7m.apps.googleusercontent.com";
 
 function GLogin() {
   const onSuccess = (res) => {
-    console.log('Login Success: currentUser:', res.profileObj);
+    console.log("Login Success: currentUser:", res.profileObj);
     alert(
       `Logged in successfully! Welcome ${res.profileObj.name}. \nYou can know take the test.`
     );
@@ -18,10 +17,8 @@ function GLogin() {
   };
 
   const onFailure = (res) => {
-    console.log('Login failed: res:', res);
-    alert(
-      `Failed to login. 😢 Please contact the developers`
-    );
+    console.log("Login failed: res:", res);
+    alert(`Failed to login. 😢 Please contact the developers`);
   };
 
   const { signIn } = useGoogleLogin({
@@ -29,22 +26,12 @@ function GLogin() {
     onFailure,
     clientId,
     isSignedIn: true,
-    accessType: 'offline',
+    accessType: "offline",
     // responseType: 'code',
     // prompt: 'consent',
   });
 
-  
-
-  return (
-    <button onClick={signIn} className="button">
-      <img src="icons/google.svg" alt="google login" className="icon"></img>
-      <span className="buttonText">Sign in with Google</span>
-    </button>
-  );
-
-  
-
+  return <img src="icons/Google.png" onClick={signIn} className="icon"></img>;
 }
 
 export default GLogin;

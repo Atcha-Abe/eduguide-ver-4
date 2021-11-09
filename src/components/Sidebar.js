@@ -18,7 +18,7 @@ function Sidebar() {
     <div className="sidebar" id={sidebar ? "show-sidebar" : "hide-sidebar"}>
       <ul className="sidebar__links">
         <li className="sidebar__link">
-          <Link to="/home" className="sidebar__link">
+          <Link to="/" className="sidebar__link">
             Home
           </Link>
         </li>

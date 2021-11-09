@@ -56,7 +56,6 @@ function AdminLogIn() {
         <p>Log In with</p>
         <div align="center">
           <GLogin />
-          <GLogout />
         </div>
         <br></br>
         <p>

@@ -25,7 +25,7 @@ export const CREATE_USER = gql`
 `;
 
 export const USER_LOGIN = gql`
-  mutation updatePassword($username: String!, $password: String!) {
+  mutation userLogin($username: String!, $password: String!) {
     message
   }
 `;
@@ -40,6 +40,22 @@ export const UPDATE_PASSWORD = gql`
       username: $username
       oldPassword: $oldPassword
       newPassword: $newPassword
+    ) {
+      message
+    }
+  }
+`;
+
+export const EDIT_PROFILE = gql`
+  mutation editProfile(
+    $username: String!
+    $levelStrand: String!
+    $school: String!
+  ) {
+    updatePassword(
+      username: $username
+      levelStrand: $levelStrand
+      school: $school
     ) {
       message
     }

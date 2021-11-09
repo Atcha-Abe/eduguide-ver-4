@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { setAccountDetails } from "../store/actions/header";
 import { CREATE_USER } from "../account/Graphql/Mutation";
 import { useMutation } from "@apollo/client";
+import GLogin from "./GLogin";
 
 function SignUp() {
   const dispatch = useDispatch();
@@ -93,9 +94,10 @@ function SignUp() {
       </form>
       <p>Sign Up with</p>
       <div align="center">
-        <img src="./icons/Google.png" className="social-icons"></img>
+        <GLogin />
       </div>
       <br></br>
+
       <Link
         to="/login"
         className="reg-btn"

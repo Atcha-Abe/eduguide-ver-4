@@ -3,9 +3,9 @@ import "./Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useDispatch, useSelector } from "react-redux";
 import { showSidebar } from "../store/actions/sidebar";
-
 import { Link } from "react-router-dom";
 import { logoutUser } from "../store/actions/header";
+import GLogout from "../account/GLogout";
 
 function NavBar() {
   //update event state
@@ -19,17 +19,18 @@ function NavBar() {
   const logoutClick = () => {
     dispatch(logoutUser());
   };
+
   return (
     <div className="navbar">
       <div className="navbar__wrapper">
         <div className="navbar__logo">
-          <Link to="/home">
+          <Link to="/">
             <img src="./images/Logo192.png" alt="eduguide logo" />
           </Link>
         </div>
         <ul className="navbar__links">
           <li className="navbar__link">
-            <Link to="/home" className="navbar__link">
+            <Link to="/" className="navbar__link">
               Home
             </Link>
           </li>
@@ -84,7 +85,14 @@ function NavBar() {
 
             {header ? (
               <li>
-                <Link to="/login" className="login-item" onClick={logoutClick}>
+                <Link
+                  to="/login"
+                  className="login-item"
+                  onClick={() => {
+                    logoutClick();
+                    GLogout();
+                  }}
+                >
                   Log Out
                 </Link>
               </li>

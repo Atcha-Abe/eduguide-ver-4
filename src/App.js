@@ -46,7 +46,7 @@ class App extends Component {
           <div className="app">
             <Navbar />
             <Sidebar />
-            <Route exact path="/home" component={Home} />
+            <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
             <Route exact path="/blogs" component={Blogs} />
             <Route exact path="/faqs" component={FAQs} />
