@@ -3,6 +3,7 @@ import { GET_ALL_USERS } from "./Queries/User";
 import {
   CREATE_USER,
   DELETE_USER,
+  EDIT_PROFILE,
   UPDATE_PASSWORD,
   USER_LOGIN,
 } from "./Mutations/User";
@@ -19,6 +20,7 @@ const Mutation = new GraphQLObjectType({
   fields: {
     createUser: CREATE_USER,
     userLogin: USER_LOGIN,
+    editProfile: EDIT_PROFILE,
     deleteUser: DELETE_USER,
     updatePassword: UPDATE_PASSWORD,
   },

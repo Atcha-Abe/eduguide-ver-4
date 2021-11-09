@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { showSidebar } from "../store/actions/sidebar";
 import { Link } from "react-router-dom";
 import { logoutUser } from "../store/actions/header";
-import GLogout from "../account/GLogout";
 
 function NavBar() {
   //update event state
@@ -90,7 +89,6 @@ function NavBar() {
                   className="login-item"
                   onClick={() => {
                     logoutClick();
-                    GLogout();
                   }}
                 >
                   Log Out

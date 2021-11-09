@@ -83,25 +83,7 @@ exports.UPDATE_PASSWORD = {
     });
   },
 };
-exports.EDIT_PROFILE = {
-  type: Messages_1.MessageType,
-  args: {
-    username: { type: graphql_1.GraphQLString },
-    levelStrand: { type: graphql_1.GraphQLString },
-    school: { type: graphql_1.GraphQLString },
-  },
-  resolve(parent, args) {
-    return __awaiter(this, void 0, void 0, function* () {
-      const { username, levelStrand, school } = args;
-      yield Users_1.Users.update(
-        { username: username },
-        { levelStrand: levelStrand },
-        { school: school }
-      );
-      return { successful: true, message: "PASSWORD UPDATED" };
-    });
-  },
-};
+
 exports.DELETE_USER = {
   type: Messages_1.MessageType,
   args: {
