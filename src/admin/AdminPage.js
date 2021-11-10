@@ -19,7 +19,7 @@ function AdminPage() {
       <div align="center">
         <h1>User Accounts</h1>
         <img src="./icons/Line.png" className="line"></img>
-        <div>
+        <div className="table-div">
           <table className="user-table">
             <tr className="admin-tr">
               <th className="table-header">Id No.</th>
