@@ -52,10 +52,10 @@ export const EDIT_PROFILE = gql`
     $levelStrand: String!
     $school: String!
   ) {
-    updatePassword(
-      username: $username
-      levelStrand: $levelStrand
-      school: $school
+    editProfile(
+      newUsername: $username
+      newLevelStrand: $levelStrand
+      newSchool: $school
     ) {
       message
     }
