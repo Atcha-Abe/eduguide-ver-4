@@ -15,6 +15,7 @@ const Mutation = new graphql_1.GraphQLObjectType({
   fields: {
     createUser: User_2.CREATE_USER,
     deleteUser: User_2.DELETE_USER,
+    editProfile: User_2.EDIT_PROFILE,
     updatePassword: User_2.UPDATE_PASSWORD,
   },
 });

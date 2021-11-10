@@ -8,6 +8,7 @@ function Home() {
   const header = useSelector((state) => state.header);
   return (
     <div align="center">
+      <br></br>
       <h1>Decide your future.</h1>
       <p>
         EduGuide is a Career Decision Tool optimized to help you make a decision

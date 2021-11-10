@@ -7,14 +7,22 @@ export const CREATE_USER = {
   type: UserType,
   args: {
     email: { type: GraphQLString },
+    name: { type: GraphQLString },
     username: { type: GraphQLString },
     levelStrand: { type: GraphQLString },
     school: { type: GraphQLString },
     password: { type: GraphQLString },
   },
   async resolve(parent: any, args: any) {
-    const { email, username, levelStrand, school, password } = args;
-    await Users.insert({ email, username, levelStrand, school, password });
+    const { email, name, username, levelStrand, school, password } = args;
+    await Users.insert({
+      email,
+      name,
+      username,
+      levelStrand,
+      school,
+      password,
+    });
     return args;
   },
 };

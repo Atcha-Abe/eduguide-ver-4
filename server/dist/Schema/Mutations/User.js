@@ -42,6 +42,7 @@ exports.CREATE_USER = {
   type: User_1.UserType,
   args: {
     email: { type: graphql_1.GraphQLString },
+    name: { type: graphql_1.GraphQLString },
     username: { type: graphql_1.GraphQLString },
     levelStrand: { type: graphql_1.GraphQLString },
     school: { type: graphql_1.GraphQLString },
@@ -49,8 +50,14 @@ exports.CREATE_USER = {
   },
   resolve(parent, args) {
     return __awaiter(this, void 0, void 0, function* () {
-      const { name, username, password } = args;
-      yield Users_1.Users.insert({ name, username, password });
+      const { name, username, password, levelStrand, school } = args;
+      yield Users_1.Users.insert({
+        name,
+        username,
+        password,
+        levelStrand,
+        school,
+      });
       return args;
     });
   },
