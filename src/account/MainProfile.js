@@ -22,6 +22,11 @@ function MainProfile() {
           <td>
             <form className="edit-form">
               <label>
+                <b>Name:</b>
+                <text type="text" className="edit-field" name="aname"></text>
+              </label>
+              <br></br>
+              <label>
                 <b>Username:</b>
                 <text type="text" className="edit-field" name="uname">
                   {header}
