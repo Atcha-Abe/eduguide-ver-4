@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, Component } from "react";
+import { InputGroup, FormControl, Input } from "react-bootstrap";
 import "./Account.css";
 
 import { Link } from "react-router-dom";

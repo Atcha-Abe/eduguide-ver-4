@@ -57,6 +57,12 @@ function Home() {
           >
             <Card title="In demand careers" imageUrl="./images/InDemand.png" />
           </a>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
         </div>
       </Router>
     </div>
