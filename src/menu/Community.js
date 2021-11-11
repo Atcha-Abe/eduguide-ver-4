@@ -1,7 +1,19 @@
-import React, { Component } from "react";
+import React, { } from "react";
+import { CREATE_POST } from "../account/Graphql/Mutation";
+import { useMutation } from "@apollo/client";
 
-export default class Community extends Component {
-  render() {
+function Community {
+
+  const [username, setUsername] = useState("");
+  const [post, setPost] = useState("");
+
+  const [createPost, { error }] = useMutation(CREATE_POST);
+
+  if (error) {
+    return <h1> {error} </h1>;
+  }
+
+
     return (
       <div align="center">
         <h1>Community</h1>
@@ -10,7 +22,11 @@ export default class Community extends Component {
           <div className="commicon">
             <img src="./icons/icon 7.png"></img>
           </div>
-          <textarea className="commfield" name="post" />
+          <textarea className="commfield" name="post" onChange={
+                ((event) => {
+                  setPost(event.target.value);
+                })
+              }/>
         </div>
         <button type="submit" className="postbtn">
           Post
@@ -57,10 +73,16 @@ export default class Community extends Component {
         <button type="submit" className="sharebtn">
           Share
         </button>
-        <button type="submit" className="deletebtn">
+        <button type="submit" className="deletebtn" onClick={
+            (() => {
+              createPost({
+                variables: {
+                  post: post,
+                },
+              });
+            }>
           Delete
         </button>
       </div>
     );
-  }
 }
