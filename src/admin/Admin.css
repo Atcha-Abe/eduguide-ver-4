@@ -1,0 +1,28 @@
+.user-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.admin-td,
+.table-header {
+  border: 1px solid var(--eduguide_blue);
+  text-align: center;
+  padding: 8px;
+}
+
+.table-header {
+  background-color: #ffb772;
+  color: black;
+  text-align: center;
+}
+
+.del-btn {
+  font-size: 1vw;
+  background-color: #ee5858;
+  color: white;
+  padding: 0.5vw 2vw;
+  border: none;
+  border-radius: 3vw;
+  font-weight: 600;
+  text-decoration: none;
+}

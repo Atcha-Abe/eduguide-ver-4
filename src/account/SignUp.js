@@ -3,15 +3,13 @@ import "./Account.css";
 
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { setAccountDetails } from "../store/actions/header";
 import { CREATE_USER } from "../account/Graphql/Mutation";
 import { useMutation } from "@apollo/client";
 import GLogin from "./GLogin";
 
 function SignUp() {
-  const dispatch = useDispatch();
-  const [userDetails, setUserDetails] = useState("");
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [userName, setUserName] = useState("");
   const [levelStrand, setLevelStrand] = useState("");
   const [school, setSchool] = useState("");
@@ -23,21 +21,27 @@ function SignUp() {
     return <h1> {error} </h1>;
   }
 
-  const handleChange = (event) => {
-    setUserDetails(event.target.value);
-  };
-
   return (
     <div align="center">
       <h1>Create an Account</h1>
       <img src="./icons/Line.png" className="line"></img>
       <form align="left" className="sign-form">
         <label>
+          <b>Name:</b>
+          <input
+            type="name"
+            className="field"
+            onChange={(event) => {
+              setName(event.target.value);
+            }}
+          />
+        </label>
+        <br></br>
+        <label>
           <b>Email:</b>
           <input
             type="email"
             className="field"
-            name="name"
             onChange={(event) => {
               setEmail(event.target.value);
             }}
@@ -106,6 +110,7 @@ function SignUp() {
           createUser({
             variables: {
               email: email,
+              name: name,
               username: userName,
               levelStrand: levelStrand,
               school: school,

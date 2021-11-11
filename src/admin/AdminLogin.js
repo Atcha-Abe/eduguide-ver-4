@@ -1,8 +1,8 @@
 import React, { Component, useState } from "react";
-import "./Account.css";
+import "./Admin.css";
 
-import GLogin from "./GLogin";
-import GLogout from "./GLogout";
+import GLogin from "../account/GLogin";
+import GLogout from "../account/GLogout";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
@@ -45,7 +45,7 @@ function AdminLogIn() {
         </form>
         <br></br>
         <Link
-          to="/welcome"
+          to="/adminpage"
           className="reg-btn"
           value="Log In"
           onClick={handleLogin}

@@ -7,14 +7,22 @@ export const CREATE_USER = {
   type: UserType,
   args: {
     email: { type: GraphQLString },
+    name: { type: GraphQLString },
     username: { type: GraphQLString },
     levelStrand: { type: GraphQLString },
     school: { type: GraphQLString },
     password: { type: GraphQLString },
   },
   async resolve(parent: any, args: any) {
-    const { email, username, levelStrand, school, password } = args;
-    await Users.insert({ email, username, levelStrand, school, password });
+    const { email, name, username, levelStrand, school, password } = args;
+    await Users.insert({
+      email,
+      name,
+      username,
+      levelStrand,
+      school,
+      password,
+    });
     return args;
   },
 };
@@ -71,19 +79,25 @@ export const UPDATE_PASSWORD = {
 export const EDIT_PROFILE = {
   type: MessageType,
   args: {
-    username: { type: GraphQLString },
-    levelStrand: { type: GraphQLString },
-    school: { type: GraphQLString },
+    newUsername: { type: GraphQLString },
+    newLevelStrand: { type: GraphQLString },
+    newSchool: { type: GraphQLString },
   },
   async resolve(parent: any, args: any) {
-    const { username, levelStrand, school } = args;
-    const user = await Users.findOne({ username: username });
-    console.log("user: ", user);
+    const { newUsername, newLevelStrand, newSchool } = args;
+    const user = await Users.findOne({ username: newUsername });
+
     if (user) {
-      await Users.update({ username }, { username, levelStrand, school });
+      await Users.update(
+        { username: newUsername },
+        {
+          username: newUsername,
+          levelStrand: newLevelStrand,
+          school: newSchool,
+        }
+      );
+
       return { successful: true, message: "PROFILE UPDATED" };
-    } else {
-      throw new Error("USER DOES NOT EXIST!");
     }
   },
 };

@@ -3,6 +3,7 @@ import gql from "graphql-tag";
 export const CREATE_USER = gql`
   mutation createUser(
     $email: String!
+    $name: String!
     $username: String!
     $levelStrand: String!
     $school: String!
@@ -10,6 +11,7 @@ export const CREATE_USER = gql`
   ) {
     createUser(
       email: $email
+      name: $name
       username: $username
       levelStrand: $levelStrand
       school: $school
@@ -17,6 +19,7 @@ export const CREATE_USER = gql`
     ) {
       id
       email
+      name
       username
       levelStrand
       school
@@ -52,10 +55,10 @@ export const EDIT_PROFILE = gql`
     $levelStrand: String!
     $school: String!
   ) {
-    updatePassword(
-      username: $username
-      levelStrand: $levelStrand
-      school: $school
+    editProfile(
+      newUsername: $username
+      newLevelStrand: $levelStrand
+      newSchool: $school
     ) {
       message
     }
