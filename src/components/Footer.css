@@ -7,7 +7,6 @@
 footer {
   background-color: var(--eduguide_blue);
   color: white;
-  max-width: 150%;
   position: absolute;
   bottom: inherit;
   margin-top: 20%;
