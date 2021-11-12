@@ -7,7 +7,7 @@ function Footer() {
     <footer>
       <section className="Footer-Fixing">
         <div align="center" className="foot_dev">
-          <a href="https://messenger.com/">
+          <a href="https://www.facebook.com/eduguideacmr">
             <img
               src="./icons/MessengerWhite.png"
               className="footer-icons"
