@@ -1,11 +1,11 @@
-import React, { useState, Component } from "react";
+import React, { useState } from "react";
 import "./Account.css";
 
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import { CREATE_USER } from "../account/Graphql/Mutation";
 import { useMutation } from "@apollo/client";
 import GLogin from "./GLogin";
+import { useForm } from "react-hook-form";
 
 function SignUp() {
   const [email, setEmail] = useState("");
@@ -15,26 +15,43 @@ function SignUp() {
   const [school, setSchool] = useState("");
   const [password, setPassword] = useState("");
 
-  const [createUser, { error }] = useMutation(CREATE_USER);
+  const [createUser] = useMutation(CREATE_USER);
 
-  if (error) {
-    return <h1> {error} </h1>;
-  }
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+    reset();
+  };
 
   return (
     <div align="center">
       <h1>Create an Account</h1>
       <img src="./icons/Line.png" className="line"></img>
-      <form align="left" className="sign-form">
+      <form
+        align="left"
+        className="sign-form"
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <label>
           <b>Name:</b>
           <input
             type="name"
             className="field"
+            ref={register({ required: true })}
             onChange={(event) => {
               setName(event.target.value);
             }}
+            {...register("name", { required: true })}
           />
+          {errors.name && (
+            <small className="error">{errors.name.message}</small>
+          )}
         </label>
         <br></br>
         <label>
@@ -45,7 +62,11 @@ function SignUp() {
             onChange={(event) => {
               setEmail(event.target.value);
             }}
+            {...register("email", { required: true })}
           />
+          {errors.email && (
+            <small className="error">{errors.email.message}</small>
+          )}
         </label>
         <br></br>
         <label>
@@ -57,7 +78,11 @@ function SignUp() {
             onChange={(event) => {
               setUserName(event.target.value);
             }}
+            {...register("uname", { required: true })}
           />
+          {errors.uname && (
+            <small className="error">{errors.uname.message}</small>
+          )}
         </label>
         <br></br>
         <label>
@@ -69,7 +94,11 @@ function SignUp() {
             onChange={(event) => {
               setLevelStrand(event.target.value);
             }}
+            {...register("levelStrand", { required: true })}
           />
+          {errors.levelStrand && (
+            <small className="error">{errors.levelStrand.message}</small>
+          )}
         </label>
         <br></br>
         <label>
@@ -81,7 +110,11 @@ function SignUp() {
             onChange={(event) => {
               setSchool(event.target.value);
             }}
+            {...register("school", { required: true })}
           />
+          {errors.school && (
+            <small className="error">{errors.school.message}</small>
+          )}
         </label>
         <br></br>
         <label>
@@ -93,6 +126,7 @@ function SignUp() {
             onChange={(event) => {
               setPassword(event.target.value);
             }}
+            {...register("password", { required: true })}
           />
         </label>
       </form>
@@ -101,7 +135,6 @@ function SignUp() {
         <GLogin />
       </div>
       <br></br>
-
       <Link
         to="/login"
         className="reg-btn"

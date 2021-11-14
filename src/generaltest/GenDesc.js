@@ -22,9 +22,9 @@ export default class GenDesc extends Component {
         </p>
         <div align="center">
           <label className="gen-desc">
-            <input type="checkbox" className="gen-input" />I acknowledge that I
-            have read and understand the abovementioned Support Decision
-            Integrity information as it pertains to the test.
+            <input type="checkbox" />I acknowledge that I have read and
+            understand the abovementioned Support Decision Integrity information
+            as it pertains to the test.
           </label>
           <br></br>
           <label className="gen-desc">

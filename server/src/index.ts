@@ -8,12 +8,13 @@ import { Users } from "./Entities/Users";
 const main = async () => {
   await createConnection({
     type: "mysql",
-    database: "eduguide",
-    username: "root",
-    password: "@EduGuide2021",
+    database: "edugzlxq_eduguide",
+    username: "u0zavi5cst8ww8xh",
+    password: "tbK0IgF5UIcCuXzwId3N",
     logging: true,
     synchronize: true,
     entities: [Users],
+    url: "mysql://u0zavi5cst8ww8xh:tbK0IgF5UIcCuXzwId3N@bqjkxjqcj9bty6g6hbkk-mysql.services.clever-cloud.com:3306/bqjkxjqcj9bty6g6hbkk",
   });
 
   const app = express();

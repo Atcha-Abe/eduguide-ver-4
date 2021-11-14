@@ -23,7 +23,7 @@ h3 {
   color: var(--eduguide_orange);
   font-size: 1.5vw;
   width: auto;
-  height: auto;
+  height: 1vw;
   margin-left: 0%;
 }
 
@@ -37,6 +37,7 @@ h3 {
 
 .gen-input {
   background-color: var(--eduguide_orange);
+  size: 2vw;
 }
 
 h2 {
@@ -99,4 +100,14 @@ h2 {
 
 .course-table {
   width: 100%;
+}
+
+input[type="checkbox"] {
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.2); /* IE */
+  -moz-transform: scale(1.2); /* FF */
+  -webkit-transform: scale(1.2); /* Safari and Chrome */
+  -o-transform: scale(1.2); /* Opera */
+  transform: scale(1.2);
+  padding: 10px;
 }

@@ -42,7 +42,7 @@ class App extends Component {
     });
 
     return (
-      <Router>
+      <Router>S
         <ApolloProvider client={client}>
           <div className="app">
             <Navbar />

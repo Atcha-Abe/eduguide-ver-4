@@ -1,5 +1,6 @@
 {
-  "name": "eduguide-ver-3",
+  "name": "eduguide-ver-4",
+  "homepage": "www.eduguide.ph",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,6 +23,7 @@
     "react-dom": "^17.0.2",
     "react-gmail": "^1.0.1",
     "react-google-login": "^5.2.2",
+    "react-hook-form": "^7.19.4",
     "react-icons": "^4.2.0",
     "react-redux": "^7.2.5",
     "react-router-dom": "^5.3.0",
