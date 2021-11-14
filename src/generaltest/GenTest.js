@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./General.css";
 
-export default function App() {
+export default function GenTest() {
 	const questions = [
 		{
 			questionText: 'On a scale of 1-5 where 5 is the highest, how interested are you in computers?',
