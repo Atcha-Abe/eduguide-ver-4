@@ -55,7 +55,11 @@ function Home() {
             href="https://blog.coastline.edu/top-10-careers-in-demand-for-2021"
             target="_blank"
           >
-            <Card title="In demand careers" imageUrl="./images/InDemand.png" />
+            <Card
+              title="In demand careers"
+              imageUrl="./images/InDemand.png"
+              alt="indemand"
+            />
           </a>
           <br></br>
           <br></br>

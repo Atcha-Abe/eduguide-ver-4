@@ -1,6 +1,5 @@
 {
   "name": "eduguide-ver-4",
-  "homepage": "www.eduguide.ph",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

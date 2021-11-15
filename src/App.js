@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
@@ -37,12 +37,12 @@ import Footer from "./components/Footer";
 class App extends Component {
   render() {
     const client = new ApolloClient({
-      uri: "http://localhost:3001/graphql",
+      uri: "https://eduguide-backend.herokuapp.com/graphql",
       cache: new InMemoryCache(),
     });
 
     return (
-      <Router>S
+      <Router>
         <ApolloProvider client={client}>
           <div className="app">
             <Navbar />
