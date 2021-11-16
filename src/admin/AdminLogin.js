@@ -52,7 +52,6 @@ function AdminLogIn() {
         >
           Log In
         </Link>
-
         <p>Log In with</p>
         <div align="center">
           <GLogin />
@@ -66,6 +65,14 @@ function AdminLogIn() {
             </Link>
           </b>
         </p>
+        <br></br>
+        <br></br>
+        Not an admin? LogIn
+        <b>
+          <Link to="/adminlogin" style={{ textDecoration: "none" }}>
+            here
+          </Link>
+        </b>
       </div>
     </body>
   );

@@ -37,7 +37,7 @@ import Footer from "./components/Footer";
 class App extends Component {
   render() {
     const client = new ApolloClient({
-      uri: "https://eduguide-backend.herokuapp.com/graphql",
+      uri: "http://localhost:3001/graphql",
       cache: new InMemoryCache(),
     });
 

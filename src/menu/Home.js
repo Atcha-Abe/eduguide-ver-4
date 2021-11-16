@@ -62,11 +62,6 @@ function Home() {
             />
           </a>
           <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
         </div>
       </Router>
     </div>

@@ -24,32 +24,72 @@ function SignUp() {
       <form align="left" className="sign-form">
         <label>
           <b>Name:</b>
-          <input type="name" className="field" />
+          <input
+            type="name"
+            className="field"
+            onChange={(event) => {
+              setName(event.target.value);
+            }}
+          />
         </label>
         <br></br>
         <label>
           <b>Email:</b>
-          <input type="email" className="field" />
+          <input
+            type="email"
+            className="field"
+            onChange={(event) => {
+              setEmail(event.target.value);
+            }}
+          />
         </label>
         <br></br>
         <label>
           <b>Username:</b>
-          <input type="text" className="field" name="uname" />
+          <input
+            type="text"
+            className="field"
+            name="uname"
+            onChange={(event) => {
+              setUserName(event.target.value);
+            }}
+          />
         </label>
         <br></br>
         <label>
           <b>Level/Strand:</b>
-          <input type="text" className="field" name="levelstrand" />
+          <input
+            type="text"
+            className="field"
+            name="levelstrand"
+            onChange={(event) => {
+              setLevelStrand(event.target.value);
+            }}
+          />
         </label>
         <br></br>
         <label>
           <b>School: </b>
-          <input type="text" className="field" name="school" />
+          <input
+            type="text"
+            className="field"
+            name="school"
+            onChange={(event) => {
+              setSchool(event.target.value);
+            }}
+          />
         </label>
         <br></br>
         <label>
           <b> Password: </b>
-          <input type="password" className="field" name="password" />
+          <input
+            type="password"
+            className="field"
+            name="password"
+            onChange={(event) => {
+              setPassword(event.target.value);
+            }}
+          />
         </label>
       </form>
       <p>Sign Up with</p>

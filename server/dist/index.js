@@ -44,7 +44,6 @@ const Schema_1 = require("./Schema");
 const cors_1 = __importDefault(require("cors"));
 const typeorm_1 = require("typeorm");
 const Users_1 = require("./Entities/Users");
-const Community_1 = require("./Entities/Community");
 const main = () =>
   __awaiter(void 0, void 0, void 0, function* () {
     yield (0, typeorm_1.createConnection)({
@@ -54,7 +53,7 @@ const main = () =>
       password: "@EduGuide2021",
       logging: true,
       synchronize: true,
-      entities: [Users_1.Users][Community_1.Community],
+      entities: [Users_1.Users],
     });
     const app = (0, express_1.default)();
     app.use((0, cors_1.default)());
