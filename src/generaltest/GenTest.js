@@ -10,7 +10,7 @@ export default function GenTest() {
 				{ answerText: '2', isCorrect: false },
 				{ answerText: '3', isCorrect: true },
 				{ answerText: '4', isCorrect: false },
-        { answerText: '5', isCorrect: false },
+        		{ answerText: '5', isCorrect: false },
 			],
 		},
 		{
@@ -20,17 +20,17 @@ export default function GenTest() {
 				{ answerText: '2', isCorrect: false },
 				{ answerText: '3', isCorrect: true },
 				{ answerText: '4', isCorrect: false },
-        { answerText: '5', isCorrect: false },
-			],
+        		{ answerText: '5', isCorrect: false },
+			]
 		},
 		{
 			questionText: 'On a scale of 1-5 where 5 is the highest, how interested are you in health care practices?',
 			answerOptions: [
-        { answerText: '1', isCorrect: false },
+				{ answerText: '1', isCorrect: false },
 				{ answerText: '2', isCorrect: false },
 				{ answerText: '3', isCorrect: true },
 				{ answerText: '4', isCorrect: false },
-        { answerText: '5', isCorrect: false },
+        		{ answerText: '5', isCorrect: false },
 			],
 		},
 		{
@@ -40,7 +40,7 @@ export default function GenTest() {
 				{ answerText: '2', isCorrect: false },
 				{ answerText: '3', isCorrect: true },
 				{ answerText: '4', isCorrect: false },
-        { answerText: '5', isCorrect: false },
+        		{ answerText: '5', isCorrect: false },
 			],
 		},
     {
@@ -50,7 +50,7 @@ export default function GenTest() {
 				{ answerText: '2', isCorrect: false },
 				{ answerText: '3', isCorrect: true },
 				{ answerText: '4', isCorrect: false },
-        { answerText: '5', isCorrect: false },
+        		{ answerText: '5', isCorrect: false },
 			],
 		},
     {
@@ -60,7 +60,7 @@ export default function GenTest() {
 				{ answerText: '2', isCorrect: false },
 				{ answerText: '3', isCorrect: true },
 				{ answerText: '4', isCorrect: false },
-        { answerText: '5', isCorrect: false },
+        		{ answerText: '5', isCorrect: false },
 			],
 		},
     {
@@ -70,7 +70,7 @@ export default function GenTest() {
 				{ answerText: '2', isCorrect: false },
 				{ answerText: '3', isCorrect: true },
 				{ answerText: '4', isCorrect: false },
-        { answerText: '5', isCorrect: false },
+        		{ answerText: '5', isCorrect: false },
 			],
 		},
     {
@@ -80,7 +80,7 @@ export default function GenTest() {
 				{ answerText: '2', isCorrect: false },
 				{ answerText: '3', isCorrect: true },
 				{ answerText: '4', isCorrect: false },
-        { answerText: '5', isCorrect: false },
+        		{ answerText: '5', isCorrect: false },
 			],
 		},
     {
@@ -90,7 +90,7 @@ export default function GenTest() {
 				{ answerText: '2', isCorrect: false },
 				{ answerText: '3', isCorrect: true },
 				{ answerText: '4', isCorrect: false },
-        { answerText: '5', isCorrect: false },
+        		{ answerText: '5', isCorrect: false },
 			],
 		},
     {
@@ -100,7 +100,7 @@ export default function GenTest() {
 				{ answerText: '2', isCorrect: false },
 				{ answerText: '3', isCorrect: true },
 				{ answerText: '4', isCorrect: false },
-        { answerText: '5', isCorrect: false },
+        		{ answerText: '5', isCorrect: false },
 			],
 		},
 	];
