@@ -1,16 +1,57 @@
-import React, { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./Account.css";
+import axios from "axios";
 
 import { Link } from "react-router-dom";
 import { CREATE_USER } from "../account/Graphql/Mutation";
 import { useMutation } from "@apollo/client";
 import GLogin from "./GLogin";
-import { useForm } from "react-hook-form";
+
+function useKey(key, cb) {
+  const callbackRef = useRef(cb);
+  useEffect(() => {
+    callbackRef.current = cb;
+  });
+
+  useEffect(() => {
+    function handle(event) {
+      if (event.keyCode === 13) {
+        callbackRef.current(event);
+        <Link to="/login"></Link>;
+      }
+    }
+    document.addEventListener("keypress", handle);
+    return () => document.removeEventListener("keypress", handle);
+  }, [key]);
+}
 
 function SignUp() {
+  function handleEnter() {
+    console.log("Enter key is pressed");
+    createUser({
+      variables: {
+        email: email,
+        name: name,
+        username: username,
+        levelStrand: levelStrand,
+        school: school,
+        password: password,
+      },
+    });
+    axios
+      .post("http://localhost:3002/login", createUser)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+  useKey("Enter", handleEnter);
+
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
-  const [userName, setUserName] = useState("");
+  const [username, setUsername] = useState("");
   const [levelStrand, setLevelStrand] = useState("");
   const [school, setSchool] = useState("");
   const [password, setPassword] = useState("");
@@ -51,7 +92,7 @@ function SignUp() {
             className="field"
             name="uname"
             onChange={(event) => {
-              setUserName(event.target.value);
+              setUsername(event.target.value);
             }}
           />
         </label>
@@ -106,7 +147,7 @@ function SignUp() {
             variables: {
               email: email,
               name: name,
-              username: userName,
+              username: username,
               levelStrand: levelStrand,
               school: school,
               password: password,
