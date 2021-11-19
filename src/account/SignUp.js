@@ -17,6 +17,7 @@ function useKey(key, cb) {
     function handle(event) {
       if (event.keyCode === 13) {
         callbackRef.current(event);
+        <Link to="/login"></Link>;
       }
     }
     document.addEventListener("keypress", handle);
@@ -38,9 +39,9 @@ function SignUp() {
       },
     });
     axios
-      .post("signup", createUser)
+      .post("http://localhost:3002/login", createUser)
       .then((res) => {
-        localStorage.setItem("token", res.token);
+        console.log(res);
       })
       .catch((err) => {
         console.log(err);

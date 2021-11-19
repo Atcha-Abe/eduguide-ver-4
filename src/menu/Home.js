@@ -6,7 +6,6 @@ import { useSelector } from "react-redux";
 
 function Home() {
   const header = useSelector((state) => state.header);
-
   return (
     <div align="center">
       <br></br>

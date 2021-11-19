@@ -37,7 +37,7 @@ function LogIn() {
       },
     });
     axios
-      .post("http://localhost:3002/login", userLogin)
+      .post("login", userLogin)
       .then((res) => {
         console.log(res);
       })

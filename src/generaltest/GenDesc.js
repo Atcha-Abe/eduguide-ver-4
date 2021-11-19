@@ -22,7 +22,7 @@ export default class GenDesc extends Component {
         </p>
         <div align="center">
           <label className="gen-desc">
-            <input type="checkbox" />I acknowledge that I have read and
+            <input type="checkbox" required />I acknowledge that I have read and
             understand the abovementioned Support Decision Integrity information
             as it pertains to the test.
           </label>
@@ -41,7 +41,7 @@ export default class GenDesc extends Component {
         </div>
         <br></br>
         <br></br>
-        <Link to="/gentest" className="test-btn" value="submit">
+        <Link to="/gentest" className="test-btn" type="submit">
           Take the Test
         </Link>
         <p className="bottom_p">

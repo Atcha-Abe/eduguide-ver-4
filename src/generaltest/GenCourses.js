@@ -72,6 +72,7 @@ export default class GenCourses extends Component {
             </td>
           </tr>
         </table>
+
         <p className="bottom_p">
           <b>Make the right decision.</b>
         </p>
