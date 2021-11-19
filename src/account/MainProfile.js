@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import "./Account.css";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { GET_ALL_USERS } from "../account/Graphql/Queries";
+import { useQuery } from "@apollo/client";
 
 function MainProfile() {
   const header = useSelector((state) => state.header);
-
+  const { data } = useQuery(GET_ALL_USERS);
   return (
     <div>
       <h3>My Profile</h3>
@@ -20,29 +22,40 @@ function MainProfile() {
             </div>
           </td>
           <td>
-            <form className="edit-form">
-              <label>
-                <b>Name:</b>
-                <text type="text" className="edit-field" name="aname"></text>
-              </label>
-              <br></br>
-              <label>
-                <b>Username:</b>
-                <text type="text" className="edit-field" name="uname">
-                  {header}
-                </text>
-              </label>
-              <br></br>
-              <label>
-                <b>Level/Strand:</b>
-                <input type="text" className="edit-field" name="lvlstrand" />
-              </label>
-              <br></br>
-              <label>
-                <b>School:</b>
-                <input type="text" className="edit-field" name="school" />
-              </label>
-            </form>
+            {data &&
+              data.getAllUsers.map((user) => {
+                <form className="edit-form">
+                  <label>
+                    <b>Name:</b>
+                    <text type="text" className="edit-field" name="name">
+                      {user.name}
+                    </text>
+                  </label>
+                  <br></br>
+                  <label>
+                    <b>Username:</b>
+                    <text type="text" className="edit-field" name="uname">
+                      {user.username}
+                    </text>
+                  </label>
+                  <br></br>
+                  <label>
+                    <b>Level/Strand:</b>
+                    <text type="text" className="edit-field" name="levelStrand">
+                      {user.levelStrand}
+                    </text>
+                  </label>
+                  <br></br>
+                  <label>
+                    <b>School:</b>
+                    <text
+                      type="text"
+                      className="edit-field"
+                      name="school"
+                    ></text>
+                  </label>
+                </form>;
+              })}
           </td>
         </tr>
       </table>

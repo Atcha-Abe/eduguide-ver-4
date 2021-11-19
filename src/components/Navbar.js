@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { showSidebar } from "../store/actions/sidebar";
 import { Link } from "react-router-dom";
 import { logoutUser } from "../store/actions/header";
+import axios from "axios";
 
 function NavBar() {
   //update event state
@@ -17,6 +18,25 @@ function NavBar() {
   };
   const logoutClick = () => {
     dispatch(logoutUser());
+  };
+
+  const componentDidMount = (e) => {
+    const config = {
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem("token"),
+      },
+    };
+
+    axios.get("user", config).then(
+      (res) => {
+        this.header({
+          user: res.data,
+        });
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
   };
 
   return (
@@ -81,7 +101,6 @@ function NavBar() {
                 </Link>
               </li>
             )}
-
             {header ? (
               <li>
                 <Link

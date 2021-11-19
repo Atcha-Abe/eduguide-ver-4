@@ -3,12 +3,12 @@ import "./Admin.css";
 
 import GLogin from "../account/GLogin";
 import { Link } from "react-router-dom";
-import { GET_ALL_USERS } from "../account/Graphql/Queries";
+import { GET_USER } from "../account/Graphql/Queries";
 import { DELETE_USER } from "../account/Graphql/Mutation";
 import { useQuery, useMutation } from "@apollo/client";
 
 function AdminPage() {
-  const { data } = useQuery(GET_ALL_USERS);
+  const { data } = useQuery(GET_USER);
 
   const [deleteUser, { error }] = useMutation(DELETE_USER);
   if (error) {
@@ -30,7 +30,7 @@ function AdminPage() {
               <th className="table-header">School</th>
             </tr>
             {data &&
-              data.getAllUsers.map((user) => {
+              data.getUser.map((user) => {
                 return (
                   <tr className="admin-tr">
                     <td className="admin-td"> {user.id} </td>

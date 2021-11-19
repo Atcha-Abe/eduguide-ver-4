@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./Account.css";
 import GLogin from "./GLogin";
 import { Link } from "react-router-dom";
@@ -8,8 +8,45 @@ import { logoutUser, setAccountDetails } from "../store/actions/header";
 import { button, buttonText, icon } from "./GLogin.css";
 import { USER_LOGIN } from "../account/Graphql/Mutation";
 import { useMutation } from "@apollo/client";
+import axios from "axios";
+
+function useKey(key, cb) {
+  const callbackRef = useRef(cb);
+  useEffect(() => {
+    callbackRef.current = cb;
+  });
+
+  useEffect(() => {
+    function handle(event) {
+      if (event.keyCode === 13) {
+        callbackRef.current(event);
+      }
+    }
+    document.addEventListener("keypress", handle);
+    return () => document.removeEventListener("keypress", handle);
+  }, [key]);
+}
 
 function LogIn() {
+  function handleEnter() {
+    console.log("Enter key is pressed");
+    userLogin({
+      variables: {
+        username: username,
+        password: password,
+      },
+    });
+    axios
+      .post("http://localhost:3002/login", userLogin)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+  useKey("Enter", handleEnter);
+
   const dispatch = useDispatch();
 
   const [userDetails, setUserDetails] = useState("");
