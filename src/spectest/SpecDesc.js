@@ -3,6 +3,42 @@ import "./Specialized.css";
 
 import { Link } from "react-router-dom";
 export default class SpecDesc extends Component {
+  state = {
+    checkbox: "",
+    checkboxValid: false,
+    errorMsg: {},
+    selectedCheckBox: 0,
+  };
+
+  validateForm = () => {
+    const { checkboxValid } = this.state;
+    this.setState({
+      formValid: checkboxValid,
+    });
+  };
+
+  updateCheckbox = ({ name, checked }) => {
+    this.setState(
+      (prev) => ({
+        checkbox: checked,
+        selectedCheckBox: checked
+          ? prev.selectedCheckBox + 1
+          : prev.selectedCheckBox - 1,
+      }),
+      this.validateCheckbox
+    );
+  };
+
+  validateCheckbox = () => {
+    const { checkbox } = this.state;
+    let checkboxValid = true;
+    let errorMsg = { ...this.state.errorMsg };
+    if (this.state.selectedCheckBox < 2) {
+      checkboxValid = false;
+      errorMsg.checkbox = "Please select all checkboxes";
+    }
+    this.setState({ checkboxValid, errorMsg }, this.validateForm);
+  };
   render() {
     return (
       <div align="center">
@@ -20,21 +56,35 @@ export default class SpecDesc extends Component {
         </p>
         <div align="center">
           <label className="spec-desc">
-            <input type="checkbox" />I acknowledge that I have read and
-            understand the abovementioned Support Decision Integrity information
-            as it pertains to the test.
+            <input
+              type="checkbox"
+              className="test-input"
+              onChange={(e) => this.updateCheckbox(e.target)}
+            />
+            I acknowledge that I have read and understand the abovementioned
+            Support Decision Integrity information as it pertains to the test.
           </label>
           <br></br>
           <label className="spec-desc">
-            <input type="checkbox" />I agree to complete the test in accordance
-            with the abovementioned Support Decision Integrity information.
+            <input
+              type="checkbox"
+              className="test-input"
+              onChange={(e) => this.updateCheckbox(e.target)}
+            />
+            I agree to complete the test in accordance with the abovementioned
+            Support Decision Integrity information.
           </label>
         </div>
         <br></br>
         <br></br>
-        <Link to="/spectest1" className="test-btn" value="submit">
-          Take the Test
-        </Link>
+        <button
+          className="button"
+          type="submit"
+          disabled={!this.state.formValid}
+          onClick={this.routeChange}
+        >
+          Take the test
+        </button>
         <p className="bottom_p">
           <b>Make the right decision.</b>
         </p>

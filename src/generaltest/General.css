@@ -35,9 +35,14 @@ h3 {
   font-weight: bold;
 }
 
-.gen-input {
+.test-input {
   background-color: var(--eduguide_orange);
   size: 2vw;
+}
+
+input.test-input {
+  width: 2.05vw;
+  height: 2.05vw;
 }
 
 h2,
@@ -107,11 +112,18 @@ h3 {
 
 .answer-section {
   /* Double-sized Checkboxes */
-  -ms-transform: scale(1.2); /* IE */
-  -moz-transform: scale(1.2); /* FF */
-  -webkit-transform: scale(1.2); /* Safari and Chrome */
-  -o-transform: scale(1.2); /* Opera */
-  transform: scale(1.2);
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  transform: scale(1.5);
   padding: 5px;
   filter: invert(100%) hue-rotate(20deg) brightness(1);
+}
+
+.button {
+  width: 13%;
+  font-size: 1.5vw;
+  background-color: #ffb772;
+  font-color: var(--eduguide_blue);
 }

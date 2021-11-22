@@ -54,6 +54,19 @@ function Welcome() {
               <img src="./images/Decide.jpg" className="img-about"></img>
             </td>
           </tr>
+          <tr>
+            <td className="intro-col">
+              <h1>Share EduGuide with your friends</h1>
+              <p>
+                Once that you have received your results, choose the path that
+                you are the most comfortable with and pave your way towards the
+                future for a better tomorrow.
+              </p>
+            </td>
+            <td>
+              <img src="./images/Decide.jpg" className="img-about"></img>
+            </td>
+          </tr>
         </table>
       </div>
       <br />
