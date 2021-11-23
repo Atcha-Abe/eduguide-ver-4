@@ -125,5 +125,5 @@ h3 {
   width: 13%;
   font-size: 1.5vw;
   background-color: #ffb772;
-  font-color: var(--eduguide_blue);
+  font-style: var(--eduguide_blue);
 }

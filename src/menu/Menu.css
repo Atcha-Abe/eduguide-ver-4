@@ -212,7 +212,7 @@ h6 {
   color: var(--eduguide_blue);
   background-color: white;
   border: none;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .sharebtn:hover {
@@ -227,7 +227,7 @@ h6 {
   color: var(--eduguide_blue);
   background-color: white;
   border: none;
-  margin-left: 320px;
+  margin-left: 210px;
 }
 
 .deletebtn:hover {

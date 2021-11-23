@@ -27,6 +27,15 @@ function Community() {
       <button type="submit" className="sharebtn">
         Share
       </button>
+      <button type="submit" className="sharebtn">
+        <a
+          href="https://forms.office.com/r/Juc6FTPfKC"
+          className="sharebtn"
+          target="_blank"
+        >
+          Report
+        </a>
+      </button>
       <button type="submit" className="deletebtn">
         Delete
       </button>
@@ -42,6 +51,15 @@ function Community() {
       <button type="submit" className="sharebtn">
         Share
       </button>
+      <button type="submit" className="sharebtn">
+        <a
+          href="https://forms.office.com/r/Juc6FTPfKC"
+          className="sharebtn"
+          target="_blank"
+        >
+          Report
+        </a>
+      </button>
       <button type="submit" className="deletebtn">
         Delete
       </button>
@@ -56,6 +74,15 @@ function Community() {
       </button>
       <button type="submit" className="sharebtn">
         Share
+      </button>
+      <button type="submit" className="sharebtn">
+        <a
+          href="https://forms.office.com/r/Juc6FTPfKC"
+          className="sharebtn"
+          target="_blank"
+        >
+          Report
+        </a>
       </button>
       <button type="submit" className="deletebtn">
         Delete
