@@ -1,7 +1,15 @@
 import React from "react";
-import { useMutation } from "@apollo/client";
+import { useMutation, useQuery } from "@apollo/client";
+import { CREATE_COMMUNITY } from "../account/Graphql/Mutation";
+import { GET_ALL_POSTS } from "../account/Graphql/Queries";
 
 function Community() {
+  const { data } = useQuery(GET_ALL_POSTS);
+  const [createCommunity, { error }] = useMutation(CREATE_COMMUNITY);
+  if (error) {
+    return <h1> {error} </h1>;
+  }
+  
   return (
     <div align="center">
       <h1>Community</h1>
@@ -12,7 +20,9 @@ function Community() {
         </div>
         <textarea className="commfield" name="post" />
       </div>
-      <button type="submit" className="postbtn">
+      <button type="submit" className="postbtn" onClick= {()=>{
+        
+      }}>
         Post
       </button>
       <div className="commdiv">
@@ -89,6 +99,7 @@ function Community() {
       </button>
     </div>
   );
+    
 }
 
 export default Community;

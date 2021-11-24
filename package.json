@@ -23,7 +23,7 @@
     "mysql2": "^2.3.3-rc.0",
     "nodemon": "^2.0.14",
     "php": "^1.0.2",
-    "react": "^17.0.2",
+    "react": "16.14.0",
     "react-bootstrap": "^2.0.2",
     "react-dom": "16.14.0",
     "react-gmail": "^1.0.1",
