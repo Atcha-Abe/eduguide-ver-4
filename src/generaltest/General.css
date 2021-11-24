@@ -35,12 +35,18 @@ h3 {
   font-weight: bold;
 }
 
-.gen-input {
+.test-input {
   background-color: var(--eduguide_orange);
   size: 2vw;
 }
 
-h2 {
+input.test-input {
+  width: 2.05vw;
+  height: 2.05vw;
+}
+
+h2,
+h3 {
   font-size: 2.05vw;
   color: var(--eduguide_blue);
 }
@@ -51,12 +57,12 @@ h2 {
   color: var(--eduguide_orange);
 }
 
-.test-title {
+.question-count {
   background-color: var(--eduguide_orange);
   border: none;
   border-radius: 3vw;
   font-weight: bold;
-  width: 50%;
+  width: 15%;
   padding-top: 1%;
   padding-right: 1%;
   padding-bottom: 1%;
@@ -64,18 +70,20 @@ h2 {
   margin-bottom: 2%;
 }
 
+.question-text,
 .courses-title {
   background-color: var(--eduguide_blue);
   color: white;
   border: none;
   border-radius: 3vw;
   font-weight: bold;
-  width: 70%;
+  width: 60%;
   padding-top: 1.5%;
   padding-right: 1.5%;
   padding-bottom: 1.5%;
   padding-left: 1.5%;
   margin-bottom: 1.5%;
+  font-size: 1vw;
 }
 
 .courses-column {
@@ -102,12 +110,20 @@ h2 {
   width: 100%;
 }
 
-input[type="checkbox"] {
+.answer-section {
   /* Double-sized Checkboxes */
-  -ms-transform: scale(1.2); /* IE */
-  -moz-transform: scale(1.2); /* FF */
-  -webkit-transform: scale(1.2); /* Safari and Chrome */
-  -o-transform: scale(1.2); /* Opera */
-  transform: scale(1.2);
-  padding: 10px;
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  transform: scale(1.5);
+  padding: 5px;
+  filter: invert(100%) hue-rotate(20deg) brightness(1);
+}
+
+.button {
+  width: 13%;
+  font-size: 1.5vw;
+  background-color: #ffb772;
+  font-style: var(--eduguide_blue);
 }

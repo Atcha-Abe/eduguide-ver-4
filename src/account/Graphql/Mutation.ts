@@ -72,3 +72,12 @@ export const DELETE_USER = gql`
     }
   }
 `;
+
+export const CREATE_COMMUNITY = gql`
+  mutation createCommunity($id: ID! $comment: String!) {
+    createCommunity(id: $id comment: $comment) {
+      id
+      comment
+    }
+  }
+`;

@@ -1,8 +1,51 @@
 import React, { Component } from "react";
 import "./General.css";
-
 import { Link } from "react-router-dom";
+
+import GenTest from "./GenTest";
 export default class GenDesc extends Component {
+  state = {
+    checkbox: "",
+    checkboxValid: false,
+    errorMsg: {},
+    selectedCheckBox: 0,
+  };
+
+  validateForm = () => {
+    const { checkboxValid } = this.state;
+    this.setState({
+      formValid: checkboxValid,
+    });
+  };
+
+  updateCheckbox = ({ name, checked }) => {
+    this.setState(
+      (prev) => ({
+        checkbox: checked,
+        selectedCheckBox: checked
+          ? prev.selectedCheckBox + 1
+          : prev.selectedCheckBox - 1,
+      }),
+      this.validateCheckbox
+    );
+  };
+
+  validateCheckbox = () => {
+    const { checkbox } = this.state;
+    let checkboxValid = true;
+    let errorMsg = { ...this.state.errorMsg };
+    if (this.state.selectedCheckBox < 3) {
+      checkboxValid = false;
+      errorMsg.checkbox = "Please select all checkboxes";
+    }
+    this.setState({ checkboxValid, errorMsg }, this.validateForm);
+  };
+
+  routeChange = () => {
+    let path = `/gentest`;
+    Link.push(path);
+  };
+
   render() {
     return (
       <div align="center">
@@ -22,31 +65,53 @@ export default class GenDesc extends Component {
         </p>
         <div align="center">
           <label className="gen-desc">
-            <input type="checkbox" />I acknowledge that I have read and
-            understand the abovementioned Support Decision Integrity information
-            as it pertains to the test.
+            {/* <ValidationMessage
+          valid={this.state.checkboxValid}
+          message={this.state.errorMsg.checkbox}
+        /> */}
+            <input
+              type="checkbox"
+              className="test-input"
+              onChange={(e) => this.updateCheckbox(e.target)}
+            />
+            I acknowledge that I have read and understand the abovementioned
+            Support Decision Integrity information as it pertains to the test.
           </label>
           <br></br>
           <label className="gen-desc">
-            <input type="checkbox" className="gen-input" />I agree to complete
-            the test in accordance with the abovementioned Support Decision
-            Integrity information.
+            <input
+              type="checkbox"
+              className="test-input"
+              onChange={(e) => this.updateCheckbox(e.target)}
+            />
+            I agree to complete the test in accordance with the abovementioned
+            Support Decision Integrity information.
           </label>
           <br></br>
           <label className="gen-desc">
-            <input type="checkbox" className="gen-input" />I accept receiving an
-            evaluation form via email to give feedback about the web
-            application.
+            <input
+              type="checkbox"
+              className="test-input"
+              onChange={(e) => this.updateCheckbox(e.target)}
+            />
+            I accept receiving an evaluation form via email to give feedback
+            about the web application.
           </label>
         </div>
-        <br></br>
-        <br></br>
-        <Link to="/gentest" className="test-btn" value="submit">
-          Take the Test
-        </Link>
-        <p className="bottom_p">
-          <b>Make the right decision.</b>
-        </p>
+        <div>
+          <button
+            className="button"
+            type="submit"
+            disabled={!this.state.formValid}
+            onClick={this.routeChange}
+          >
+            Take the test
+          </button>
+
+          <p className="bottom_p">
+            <b>Make the right decision.</b>
+          </p>
+        </div>
       </div>
     );
   }

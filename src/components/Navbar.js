@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { showSidebar } from "../store/actions/sidebar";
 import { Link } from "react-router-dom";
 import { logoutUser } from "../store/actions/header";
+import username from "../account/Login";
 
 function NavBar() {
   //update event state

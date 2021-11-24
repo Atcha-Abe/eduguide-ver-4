@@ -12,3 +12,12 @@ export const GET_ALL_USERS = gql`
     }
   }
 `;
+
+export const GET_ALL_POSTS = gql`
+  query getAllPost {
+    getAllPost {
+      id
+      comment  
+    }
+  }
+`;
