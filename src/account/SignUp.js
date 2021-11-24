@@ -58,6 +58,14 @@ function SignUp() {
 
   const [createUser] = useMutation(CREATE_USER);
 
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    createUser({
+      [e.target.name]: e.target.value,
+    });
+  };
+
   return (
     <div align="center">
       <h1>Create an Account</h1>
@@ -70,8 +78,10 @@ function SignUp() {
             className="field"
             onChange={(event) => {
               setName(event.target.value);
+              handleChange(event.target.value);
             }}
           />
+          {errors.name && <p className="error">{errors}</p>}
         </label>
         <br></br>
         <label>
