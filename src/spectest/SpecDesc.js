@@ -77,14 +77,16 @@ export default class SpecDesc extends Component {
         </div>
         <br></br>
         <br></br>
-        <button
+        <Link to = "/spectest1"><button
           className="button"
           type="submit"
           disabled={!this.state.formValid}
           onClick={this.routeChange}
+
         >
           Take the test
         </button>
+        </Link>
         <p className="bottom_p">
           <b>Make the right decision.</b>
         </p>

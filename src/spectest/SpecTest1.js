@@ -4,7 +4,7 @@ import "./Specialized.css";
 
 import { Link } from "react-router-dom";
 export default function SpecTest1() {
-	const CompSciQuestions = [
+	const questions = [
     
     {   
       questionText: '1)	What is a Class in Object-oriented Programming?',
@@ -123,7 +123,7 @@ export default function SpecTest1() {
 			{showScore ? (
 				<div className='score-section'>
 					You scored {score} out of {questions.length}
-          <Link to="/gencourses"> Mumu </Link>
+                    <Link to="/gencourses"> Mumu </Link>
 				</div>
 			) : (
 				<>

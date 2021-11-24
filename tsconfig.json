@@ -21,6 +21,7 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
-, "public/index.js"  ]
+    "src",
+    "public/index.js"
+  ]
 }
