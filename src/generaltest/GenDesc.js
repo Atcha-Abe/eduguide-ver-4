@@ -41,9 +41,9 @@ export default class GenDesc extends Component {
     this.setState({ checkboxValid, errorMsg }, this.validateForm);
   };
 
-  routeChange = () => {
+  routeChange = (Link) => {
     let path = `/gentest`;
-    Link.push(path);
+    Link = path;
   };
 
   render() {
@@ -99,14 +99,15 @@ export default class GenDesc extends Component {
           </label>
         </div>
         <div>
-          <Link to = "/gentest"><button
-            className="button"
-            type="submit"
-            disabled={!this.state.formValid}
-            onClick={this.routeChange}
-          >
-            Take the test
-          </button>
+          <Link to="/gentest">
+            <button
+              className="button"
+              type="submit"
+              disabled={!this.state.formValid}
+              onClick={this.routeChange}
+            >
+              Take the test
+            </button>
           </Link>
           <p className="bottom_p">
             <b>Make the right decision.</b>
