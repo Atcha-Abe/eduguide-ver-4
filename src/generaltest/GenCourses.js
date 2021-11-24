@@ -56,7 +56,7 @@ export default class GenCourses extends Component {
           <br></br>
           <tr align="center">
             <td>
-              <Link to="/specdesc" className="courses-btn" value="Take CS">
+              <Link to="/specdesc" className="courses-btn" value="TakeCS">
                 Take Computer Science test
               </Link>
             </td>
