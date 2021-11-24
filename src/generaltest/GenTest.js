@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./General.css";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function GenTest() {
 	const questions = [
