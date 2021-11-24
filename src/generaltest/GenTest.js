@@ -135,6 +135,7 @@ export default function GenTest() {
 			{showScore ? (
 				<div className='score-section'>
 					You scored {score} out of {questions.length}
+          <Link to = "/gencourses"> mami </Link>
 				</div>
 			) : (
 				<>

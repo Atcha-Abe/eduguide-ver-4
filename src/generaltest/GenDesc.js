@@ -99,7 +99,7 @@ export default class GenDesc extends Component {
           </label>
         </div>
         <div>
-          <button
+          <Link to = "/gentest"><button
             className="button"
             type="submit"
             disabled={!this.state.formValid}
@@ -107,7 +107,7 @@ export default class GenDesc extends Component {
           >
             Take the test
           </button>
-
+          </Link>
           <p className="bottom_p">
             <b>Make the right decision.</b>
           </p>
