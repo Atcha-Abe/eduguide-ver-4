@@ -162,6 +162,21 @@ export default function SpecTest1() {
               </button>
             ))}
           </div>
+          <div>
+            <br></br>
+            <Link to="/specdesc" className="reg-btn">
+              Reset
+            </Link>
+            <Link to="/spectest" className="reg-btn">
+              Back
+            </Link>
+            <Link to="/spectest" className="reg-btn">
+              Next
+            </Link>
+          </div>
+          <p className="bottom_p">
+            <b>Make the right decision.</b>
+          </p>
         </>
       )}
     </div>

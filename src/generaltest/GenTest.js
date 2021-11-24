@@ -161,6 +161,21 @@ export default function GenTest() {
               </button>
             ))}
           </div>
+          <div>
+            <br></br>
+            <Link to="/gendesc" className="reg-btn">
+              Reset
+            </Link>
+            <Link to="/gentest" className="reg-btn">
+              Back
+            </Link>
+            <Link to="/gentest" className="reg-btn">
+              Next
+            </Link>
+          </div>
+          <p className="bottom_p">
+            <b>Make the right decision.</b>
+          </p>
         </>
       )}
     </div>
