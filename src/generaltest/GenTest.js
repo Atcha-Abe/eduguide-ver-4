@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 export default function GenTest() {
 	const questions = [
-    
 	{
 		questionText: 'On a scale of 1-5 where 5 is the highest, how interested are you in computers?',
 		answerOptions: [
@@ -224,16 +223,14 @@ export default function GenTest() {
     },
   ];
 
-
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [showScore, setShowScore] = useState(false);
-  const [score, setScore] = useState(0);
+	const [showScore, setShowScore] = useState(false);
+	const [score, setScore] = useState(0);
 
-  const handleAnswerOptionClick = (isCorrect) => {
-    if (isCorrect) {
-      setScore(score + 1);
-    }
-
+	const handleAnswerOptionClick = (isCorrect) => {
+		if (isCorrect) {
+			setScore(score + 1);
+		}
 
 		const nextQuestion = currentQuestion + 1;
 		if (nextQuestion < questions.length) {
@@ -242,11 +239,14 @@ export default function GenTest() {
 			setShowScore(true);
 		}
 	};
+  
 	return (
+    
 		<div className='app'>
 			{showScore ? (
 				<div className='score-section'>
 					You scored {score} out of {questions.length}
+          <Link to="/gencourses"> Mumu </Link>
 				</div>
 			) : (
 				<>
@@ -265,5 +265,4 @@ export default function GenTest() {
 			)}
 		</div>
 	);
-
 }
