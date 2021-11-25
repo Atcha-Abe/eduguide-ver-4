@@ -26,7 +26,7 @@ import GenTest from "./generaltest/GenTest";
 import GenResults from "./generaltest/GenResults";
 import GenCourses from "./generaltest/GenCourses";
 import SpecDesc from "./spectest/SpecDesc";
-import SpecTest1 from "./spectest/SpecTest1";
+import SpecTest1 from "./spectest/BSCompSci";
 import SpecResults1 from "./spectest/SpecResults1";
 import SpecTest2 from "./spectest/SpecTest2";
 import SpecResults2 from "./spectest/SpecResults2";
