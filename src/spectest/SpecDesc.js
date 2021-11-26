@@ -83,7 +83,7 @@ export default class SpecDesc extends Component {
         </div>
         <br></br>
         <br></br>
-        <Link to="/spectest1">
+        <Link to="/bscompsci">
           <button
             className="button"
             type="submit"
