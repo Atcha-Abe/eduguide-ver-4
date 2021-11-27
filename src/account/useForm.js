@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { callbackify } from "util";
 
-const useForm = (callback, validate) => {
+const useForm = (validate) => {
   const [values, setValues] = useState({
     email: "",
     name: "",
@@ -25,14 +25,7 @@ const useForm = (callback, validate) => {
     e.preventDefault();
 
     setErrors(validate(values));
-    setIsSubmitting(true);
   };
-
-  useEffect(() => {
-    if (Object.keys(errors).length === 0 && isSubmitting) {
-      callback();
-    }
-  }, [errors]);
 
   return { handleSignup, values, handleSubmit, errors };
 };
