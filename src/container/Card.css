@@ -24,7 +24,8 @@ a {
 
 .card-text {
   font-family: Ruda;
-  font-size: 1vw;
+  font-size: 1.6vw;
+  font-weight: 400;
   color: #16367c;
   text-align: center;
 }

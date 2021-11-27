@@ -14,9 +14,7 @@ function Blogs() {
       {header ? (
         <input className="sub-btn" type="submit" value="Submit" />
       ) : (
-        <Link to="/login">
-          <input className="sub-btn" type="submit" value="Submit" />
-        </Link>
+        <Link to="/login"></Link>
       )}
     </div>
   );

@@ -19,24 +19,24 @@
 label {
   font-family: Ruda;
   font-size: 2vw;
-  margin-left: -9%;
+  margin-left: -50%;
+  font-weight: 600;
 }
 form {
-  margin-bottom: 1vw;
+  margin-bottom: 1.5vw;
+  width: 100%;
 }
 
 .field {
   font-family: Ruda;
-  font-size: 1.55vw;
-  margin-left: 12%;
-  margin-bottom: -1vw;
-  margin-top: -5%;
+  font-size: 1.5vw;
+  margin-bottom: 2%;
+  margin-top: -1.25%;
   border-top: none;
   border-right: none;
   border-left: none;
   border-width: unset;
-  width: 30%;
-  display: list-item;
+  float: left;
 }
 
 .edit-field {
@@ -170,4 +170,11 @@ h3 {
 .orange {
   color: var(--eduguide_orange);
   font-size: 1.2vw;
+}
+
+.form-error {
+  color: #ee5858;
+  font-size: 1.2vw;
+  display: flex;
+  margin-left: 8%;
 }
