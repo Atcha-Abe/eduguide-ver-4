@@ -66,7 +66,7 @@ function SignUp() {
       <h1>Create an Account</h1>
       <img src="./icons/Line.png" className="line"></img>
       <div align="left">
-        <form className="sign-form" onSubmit={handleSubmit} method="POST">
+        <form className="sign-form" onSubmit={handleSubmit}>
           <div>
             <label>
               Name:
@@ -177,26 +177,9 @@ function SignUp() {
             </label>
           </div>
           <br></br>
-          <Link to="/login">
-            <button
-              className="reg-btn"
-              type="submit"
-              onClick={() => {
-                createUser({
-                  variables: {
-                    email: email,
-                    name: name,
-                    username: username,
-                    levelStrand: levelStrand,
-                    school: school,
-                    password: password,
-                  },
-                });
-              }}
-            >
-              Sign up
-            </button>
-          </Link>
+          <button className="reg-btn" type="submit">
+            Sign up
+          </button>
         </form>
         <br></br>
         <br></br>
