@@ -3,6 +3,7 @@ import { useMutation, useQuery } from "@apollo/client";
 import { CREATE_COMMUNITY } from "../account/Graphql/Mutation";
 import { GET_ALL_POSTS } from "../account/Graphql/Queries";
 
+
 function Community() {
   const { data } = useQuery(GET_ALL_POSTS);
   const [createCommunity, { error }] = useMutation(CREATE_COMMUNITY);
@@ -34,7 +35,11 @@ function Community() {
       <button type="submit" className="commentbtn">
         Comment
       </button>
-      <button type="submit" className="sharebtn">
+      <button type="submit" className="share">
+      <a href="https://facebook.com/"
+          className="share"
+          target="_blank">
+          </a>
         Share
       </button>
       <button type="submit" className="sharebtn">
@@ -58,9 +63,14 @@ function Community() {
       <button type="submit" className="commentbtn">
         Comment
       </button>
-      <button type="submit" className="sharebtn">
+      <button type="submit" className="share">
+      <a href="https://facebook.com/"
+          className="share"
+          target="_blank">
+          </a>
         Share
-      </button>
+         </button>
+        
       <button type="submit" className="sharebtn">
         <a
           href="https://forms.office.com/r/Juc6FTPfKC"
@@ -82,7 +92,11 @@ function Community() {
       <button type="submit" className="commentbtn">
         Comment
       </button>
-      <button type="submit" className="sharebtn">
+      <button type="submit" className="share">
+      <a href="https://facebook.com/"
+          className="share"
+          target="_blank">
+          </a>
         Share
       </button>
       <button type="submit" className="sharebtn">
