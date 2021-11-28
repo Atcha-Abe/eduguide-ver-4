@@ -22,10 +22,6 @@ const ProfilePicChanger = ({ handleImageChange }) => {
 
   const [visible, setVisible] = useState(false);
 
-  const isModalVisible = () => {
-    setVisible(false);
-  };
-
   const showModal = () => {
     setVisible(true);
   };
@@ -57,7 +53,7 @@ const ProfilePicChanger = ({ handleImageChange }) => {
       </button>
       <Modal
         title="Change Eduguide Icon"
-        visible={isModalVisible}
+        visible={visible}
         onOk={handleOk}
         onCancel={handleCancel}
       >
