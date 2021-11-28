@@ -29,16 +29,7 @@ export default class SpecDesc extends Component {
     );
   };
 
-  changeCourses = () => {
-    // const history = useHistory();
-    const handleRoute = () => {
-
-      
-    }
-
-
-
-  }
+  
 
 
   validateCheckbox = () => {
@@ -55,7 +46,7 @@ export default class SpecDesc extends Component {
   
 
   routeChange = (Link) => {
-    let path = `/spectest`;
+    let path = `/bscompsci`;
     Link = path;
   };
 
