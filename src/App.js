@@ -76,6 +76,7 @@ function App() {
           <Route exact path="/changeicon" component={ChangeIcon} />
           <Route exact path="/changepass" component={ChangePass} />
           <Route exact path="/testresults" component={TestResults} />
+          <Route exact path="/forgotpass" component={ForgotPassword} />
           <Route exact path="/gendesc" component={GenDesc} />
           <Route exact path="/gentest" component={GenTest} />
           <Route exact path="/genresults" component={GenResults} />

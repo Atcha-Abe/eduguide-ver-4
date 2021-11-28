@@ -90,65 +90,63 @@ function LogIn() {
   };
 
   return (
-    <body>
-      <div align="center">
-        <h1>Log In</h1>
-        <img src="./icons/Line.png" className="line"></img>
-        <form align="left" className="sign-form">
-          <label>
-            <b>Username:</b>
-            <input
-              type="text"
-              className="field"
-              name="uname"
-              onChange={(event) => {
-                setUsername(event.target.value);
-                setUserDetails(event.target.value);
-              }}
-            />
-          </label>
-          <br></br>
-          <label>
-            <b>Password:</b>
-            <input
-              type="password"
-              className="field"
-              name="password"
-              onChange={(event) => {
-                setPassword(event.target.value);
-              }}
-            />
-          </label>
-        </form>
+    <div align="center">
+      <h1>Log In</h1>
+      <img src="./icons/Line.png" className="line"></img>
+      <form align="left" className="sign-form">
+        <label className="input-label">
+          <b>Username:</b>
+          <input
+            type="text"
+            className="field"
+            name="uname"
+            onChange={(event) => {
+              setUsername(event.target.value);
+              setUserDetails(event.target.value);
+            }}
+          />
+        </label>
+        <br></br>
+        <label className="input-label">
+          <b>Password:</b>
+          <input
+            type="password"
+            className="field"
+            name="password"
+            onChange={(event) => {
+              setPassword(event.target.value);
+            }}
+          />
+        </label>
+      </form>
 
+      <b>
+        <Link to="/forgotpass" className="link-text">
+          Forgot Password?
+        </Link>
+      </b>
+      <br></br>
+      <br></br>
+      <button className="reg-btn" type="submit" onClick={handleLogin}>
+        Log in
+      </button>
+      <br></br>
+      <br></br>
+      <p>Log In with</p>
+      <div align="center">
+        <GLogin />
+      </div>
+      <br></br>
+
+      <p>
+        Don't have an account yet? <br></br> <br></br> Sign Up{" "}
         <b>
-          <Link to="/forgotpass" style={{ textDecoration: "none" }}>
-            Forgot Password?
+          <Link to="/signup" className="link-text">
+            here
           </Link>
         </b>
-        <br></br>
-        <br></br>
-        <button className="reg-btn" type="submit" onClick={handleLogin}>
-          Log in
-        </button>
-        <br></br>
-        <br></br>
-        <p>Log In with</p>
-        <div align="center">
-          <GLogin />
-        </div>
-        <br></br>
-
-        <p>
-          Don't have an account yet? <br></br> <br></br> Sign Up{" "}
-          <b>
-            <Link to="/signup" style={{ textDecoration: "none" }}>
-              here
-            </Link>
-          </b>
-        </p>
-      </div>
-    </body>
+      </p>
+    </div>
   );
 }
 

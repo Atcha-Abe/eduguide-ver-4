@@ -25,27 +25,21 @@ export default class System extends Component {
               />
             </Link>
             {header ? (
-              <Link to="/welcome">
+              <Link to="./welcome">
                 <Card title="Take the Test" imageUrl="./images/Test.jpg" />
               </Link>
             ) : (
-              <Link to="/login">
+              <Link to="./login">
                 <Card title="Take the Test" imageUrl="./images/Test.jpg" />
               </Link>
             )}
 
-            {header ? (
-              <Link to="/community">
-                <Card
-                  title="Share it with your friends"
-                  imageUrl="./images/ShareF.jpg"
-                />
-              </Link>
-            ) : (
-              <Link to="/login">
-                <Card title="Take the Test" imageUrl="./images/Test.jpg" />
-              </Link>
-            )}
+            <Link to="./community">
+              <Card
+                title="Share it with your friends"
+                imageUrl="./images/ShareF.jpg"
+              />
+            </Link>
 
             <br></br>
           </div>

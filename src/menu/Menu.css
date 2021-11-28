@@ -10,7 +10,7 @@ h1 {
 p {
   font-family: Ruda;
   font-size: 1.5vw;
-  color: var(--eduguide_blue) !important;
+  color: var(--eduguide_blue);
   text-align: center;
   margin-top: 2.5%;
   font-weight: 400 !important;

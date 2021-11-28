@@ -18,9 +18,16 @@
 
 label {
   font-family: Ruda;
-  font-size: 2vw;
+  font-size: 2vw !important;
   margin-left: -50%;
-  font-weight: 600;
+  font-weight: 600 !important;
+}
+
+.input-label {
+  font-family: Ruda;
+  font-size: 3vw;
+  margin-left: -35%;
+  font-weight: 800;
 }
 form {
   margin-bottom: 1.5vw;
@@ -177,4 +184,8 @@ h3 {
   font-size: 1.2vw;
   display: flex;
   margin-left: 8%;
+}
+
+.link-text {
+  color: #16367c;
 }

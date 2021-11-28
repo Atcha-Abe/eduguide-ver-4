@@ -221,7 +221,7 @@ function SignUp(props) {
       <p>
         Already have an account? <br></br> Log In{" "}
         <b>
-          <Link to="/login" style={{ textDecoration: "none" }}>
+          <Link to="/login" className="link-text">
             here
           </Link>
         </b>
