@@ -1,8 +1,9 @@
 .navbar {
   background-color: white;
+  color: var(--eduguide_blue) !important;
 }
 .navbar__wrapper {
-  color: var(--eduguide_blue);
+  color: var(--eduguide_blue) !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,6 +33,7 @@ img {
   margin-left: -58%;
   margin-right: 10%;
   justify-content: space-around;
+  color: var(--eduguide_blue) !important;
 }
 
 .navbar__link {
@@ -60,7 +62,7 @@ img {
   margin: -5.9%;
   margin-right: -14%;
   font-size: 1.5vw;
-  color: var(--eduguide_blue);
+  color: var(--eduguide_blue) !important;
 }
 
 .login-item li {

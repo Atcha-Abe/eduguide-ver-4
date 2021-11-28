@@ -1,22 +1,19 @@
 h1 {
   font-family: Ruda;
   font-size: 4vw;
-  color: var(--eduguide_blue);
+  color: var(--eduguide_blue) !important;
   text-align: center;
   margin-top: 2%;
   margin-bottom: -0.1%;
-<<<<<<< HEAD
-  font-weight: 400;
-=======
-  font-weight: bold;
->>>>>>> cef2c0401c2db740f2c08a3b0e342202d3e01cd4
+  font-weight: 600 !important;
 }
 p {
   font-family: Ruda;
   font-size: 1.5vw;
-  color: var(--eduguide_blue);
+  color: var(--eduguide_blue) !important;
   text-align: center;
   margin-top: 2.5%;
+  font-weight: 400 !important;
 }
 
 .about__link {

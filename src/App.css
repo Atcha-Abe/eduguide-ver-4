@@ -1,6 +1,6 @@
 :root {
-  --eduguide_blue: #16367c;
-  --eduguide_orange: #f19336;
+  --eduguide_blue: #16367c !important;
+  --eduguide_orange: #f19336 !important;
   font-family: Ruda;
 }
 

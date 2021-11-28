@@ -9,7 +9,7 @@ function FAQs() {
   return (
     <div>
       <h1>Frequently Asked Questions</h1>
-      <p> Click to view the answer </p>
+      <p> Click the question to view the answer </p>
       <table className="faqstable">
         <tr>
           <td className="faqstd">
