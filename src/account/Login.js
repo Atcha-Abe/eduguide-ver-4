@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import "./Account.css";
 import GLogin from "./GLogin";
-import { Link } from "react-router-dom";
+import { Link,useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { logoutUser, setAccountDetails } from "../store/actions/header";
@@ -9,6 +9,7 @@ import { button, buttonText, icon } from "./GLogin.css";
 import { USER_LOGIN } from "../account/Graphql/Mutation";
 import { useMutation } from "@apollo/client";
 import axios from "axios";
+import { message } from "antd";
 
 function useKey(key, cb) {
   const callbackRef = useRef(cb);
@@ -52,20 +53,40 @@ function LogIn() {
   const [userDetails, setUserDetails] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const history = useHistory()
 
   const [userLogin, { error }] = useMutation(USER_LOGIN);
 
-  const handleLogin = () => {
-    dispatch(setAccountDetails(userDetails));
+  const handleLogin = async() => {
+    //dispatch(setAccountDetails(userDetails));
+    console.log(username,password)
+    if(username && password){
+      try {
+        const data=await userLogin({
+          variables: {
+            username: username,
+            password: password,
+          },
+        });
+        if(data?.data?.userLogin?.successful){
+          localStorage.setItem('user',JSON.stringify(data?.data?.userLogin?.user))
+          dispatch(setAccountDetails(data?.data?.userLogin?.user?.username));
+          history.push('/welcome')
+        }
+      } catch (error) {
+        console.log(error)
+        message.error('Something went wrong...please try again')
+      }
+      
+    }else{
+      message.error('Please enter valid details')
+    }
+    
   };
 
   const handleChange = (event) => {
     setUserDetails(event.target.value);
   };
-
-  if (error) {
-    return <h1> {error} </h1>;
-  }
 
   return (
     <body>
@@ -79,12 +100,10 @@ function LogIn() {
               type="text"
               className="field"
               name="uname"
-              onChange={
-                ((event) => {
+              onChange={(event) => {
                   setUsername(event.target.value);
                   setUserDetails(event.target.value);
-                },
-                handleChange)
+                }
               }
             />
           </label>
@@ -102,24 +121,9 @@ function LogIn() {
           </label>
         </form>
         <br></br>
-        <Link
-          to="/welcome"
-          className="reg-btn"
-          value="Log In"
-          onClick={
-            (() => {
-              userLogin({
-                variables: {
-                  username: username,
-                  password: password,
-                },
-              });
-            },
-            handleLogin)
-          }
-        >
-          Log In
-        </Link>
+        <button className="reg-btn" type="submit" onClick={handleLogin}>
+            Log in
+          </button>
 
         <p>Log In with</p>
         <div align="center">
