@@ -16,14 +16,14 @@ function GLogin() {
     refreshTokenSetup(res);
   };
 
-  const onFailure = (res) => {
+  /*const onFailure = (res) => {
     console.log("Login failed: res:", res);
     alert(`Failed to login. 😢 Please contact the developers`);
-  };
+  };*/
 
   const { signIn } = useGoogleLogin({
     onSuccess,
-    onFailure,
+    //onFailure,
     clientId,
     isSignedIn: true,
     accessType: "offline",

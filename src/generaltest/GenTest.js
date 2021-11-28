@@ -163,9 +163,9 @@ export default function GenTest() {
           </div>
           <div>
             <br></br>
-            <Link to="/gendesc" className="reg-btn">
+            <button className="reg-btn" type="reset">
               Reset
-            </Link>
+            </button>
             <Link to="/gentest" className="reg-btn">
               Back
             </Link>
