@@ -9,7 +9,7 @@ import Icon5 from "./pics/icon5.png";
 import Icon6 from "./pics/icon6.png";
 import Icon7 from "./pics/icon7.png";
 
-const ProfilePicChanger = () => {
+const ProfilePicChanger = ({ handleImageChange }) => {
   const [imagesArray, setImmageArray] = useState([
     Icon1,
     Icon2,
@@ -36,12 +36,6 @@ const ProfilePicChanger = () => {
 
   const handleCancel = () => {
     setVisible(false);
-  };
-
-  const [profileImage, setProfileImage] = useState("");
-
-  const handleImageChange = () => {
-    setProfileImage(profileImage);
   };
 
   const imageMapper = imagesArray.map((image) => {

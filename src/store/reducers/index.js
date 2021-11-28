@@ -3,6 +3,6 @@ import { sidebar } from "./sidebar";
 import { header } from "./header";
 
 export const rootReducer = combineReducers({
-  sidebar: sidebar,
-  header: header,
+  sidebar,
+  header,
 });
