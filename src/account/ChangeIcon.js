@@ -15,15 +15,18 @@ class ChangeIcon extends Component {
     };
   }
 
-  
+  handleImageChange = (profileImage) => {
+    this.setState({
+      profileImage,
+    });
+  };
+
   render() {
     return (
       <div align="center">
         <h3>Change Icon</h3>
         <Avatar size={100} icon="user" src={this.state.profileImage} />
-        <ProfilePicChanger
-          
-        />
+        <ProfilePicChanger handleImageChange={this.handleImageChange} />
         <div className="change-btn">
           <Link to="/EditProfile" className="reg-btn" value="Cancel">
             Cancel
