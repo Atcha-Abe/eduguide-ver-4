@@ -20,6 +20,8 @@ const ProfilePicChanger = ({ handleImageChange }) => {
     Icon7,
   ]);
 
+  const [currentImage, setCurrentImage] = useState(pic3);
+
   const [visible, setVisible] = useState(false);
 
   const showModal = () => {
@@ -34,14 +36,34 @@ const ProfilePicChanger = ({ handleImageChange }) => {
     setVisible(false);
   };
 
+  const fileSelectedHandler = (event) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      console.log(event.target.result);
+      if (reader.readyState === 2) {
+        //0=empty, 1=loading, 2=done.
+        setCurrentImage(reader.result);
+        console.log(reader.result);
+      }
+    };
+    reader.readAsDataURL(event.target.files[0]);
+  };
+
   const imageMapper = imagesArray.map((image) => {
     return (
-      <img
-        src={image}
-        onClick={() => handleImageChange(image)}
-        height="10%"
-        width="10%"
-      />
+      <>
+        <img
+          src={currentImage || image}
+          onClick={() => handleImageChange(image)}
+          height="10%"
+          width="10%"
+        />
+        <input
+          type="file"
+          onChange={fileSelectedHandler}
+          placeholder="Add Photo"
+        />
+      </>
     );
   });
   return (
