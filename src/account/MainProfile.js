@@ -8,15 +8,14 @@ import { assertNamedType } from "graphql";
 
 function MainProfile() {
   const header = useSelector((state) => state.header);
+  const icon = useSelector((state) => state.icon);
 
   return (
     <div>
       <h3>My Profile</h3>
       <table className="profile-table">
         <tr>
-          <td>
-            <Avatar size={64} icon="user" />
-          </td>
+          <td>{icon}</td>
           <td>
             <form className="edit-form">
               <label>
