@@ -51,7 +51,7 @@ class App extends Component {
       cache: new InMemoryCache(),
     });
 
-<<<<<<< HEAD
+
     return (
       <Router>
         <ApolloProvider client={client}>
@@ -92,7 +92,7 @@ class App extends Component {
       </Router>
     );
   }
-=======
+
   return (
     <Router>
       <ApolloProvider client={client}>
@@ -132,7 +132,6 @@ class App extends Component {
       </ApolloProvider>
     </Router>
   );
->>>>>>> 734dcb5751963500f0a4bd5ab54531bd40a9d353
 }
 
 export default App;
