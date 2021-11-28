@@ -320,6 +320,9 @@ export default function BSCompSci() {
     },
   ];
 
+
+  questions.sort(() => Math.random() - 0.5);
+  
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
@@ -337,6 +340,8 @@ export default function BSCompSci() {
     }
   };
   return (
+
+
     <div className="app" align="center">
       {showScore ? (
         <div className="score-section">
@@ -362,6 +367,21 @@ export default function BSCompSci() {
               </button>
             ))}
           </div>
+          <div>
+            <br></br>
+            <Link to="/specdesc" className="reg-btn">
+              Reset
+            </Link>
+            <Link to="/spectest" className="reg-btn">
+              Back
+            </Link>
+            <Link to="/spectest" className="reg-btn">
+              Next
+            </Link>
+          </div>
+          <p className="bottom_p">
+            <b>Make the right decision.</b>
+          </p>
         </>
       )}
     </div>

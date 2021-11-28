@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Specialized.css";
 
 import { Link } from "react-router-dom";
-import { triggerAsyncId } from "async_hooks";
+
 export default function BSEntrep() {
   const questions = [
     {
@@ -289,6 +289,7 @@ export default function BSEntrep() {
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
+      
     } else {
       setShowScore(true);
     }

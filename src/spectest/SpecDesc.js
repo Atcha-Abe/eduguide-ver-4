@@ -1,7 +1,33 @@
 import React, { Component } from "react";
 import "./Specialized.css";
 
+import { useState } from "react";
+
+//import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
+
+
+
+const changeCourses = ["BSCompSci", "BAEnglish", "BAJournalism"];
+
+const courses = () =>{
+  if (changeCourses === "BSCompSci"){
+    return(
+
+      <Link to="/bscompsci">
+      <button> Hehe </button></Link>
+      
+    );
+  }
+  else {
+    return(
+      <Link to="/spectest1">
+      <button> ahaha </button></Link>
+    );
+  }
+
+}
+
 export default class SpecDesc extends Component {
   state = {
     checkbox: "",
@@ -40,8 +66,20 @@ export default class SpecDesc extends Component {
     this.setState({ checkboxValid, errorMsg }, this.validateForm);
   };
 
+  //changeCourse = () =>{
+  //  const [course, setCourse] = useState({
+  //    listCourse: ["BSCompSci", "BSIT", "BAComms",]
+
+      
+
+ //   });
+ // }
+
+ 
+  
+
   routeChange = (Link) => {
-    let path = `/spectest`;
+    let path = `/bscompsci`;
     Link = path;
   };
 
