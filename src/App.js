@@ -36,11 +36,22 @@ import Footer from "./components/Footer";
 import { useDispatch, useSelector } from "react-redux";
 import { setAccountDetails } from "./store/actions/header";
 
+// GraphQl
+// function App() {
+//   const dispatch = useDispatch();
+//   const header = useSelector((state) => state.header);
+//   const client = new ApolloClient({
+//     uri: "http://localhost:3001/graphql",
+//     cache: new InMemoryCache(),
+//   });
+
+
+// Laravel
 function App() {
   const dispatch = useDispatch();
   const header = useSelector((state) => state.header);
   const client = new ApolloClient({
-    uri: "http://localhost:3001/graphql",
+    uri: "http://localhost:8000",
     cache: new InMemoryCache(),
   });
 
