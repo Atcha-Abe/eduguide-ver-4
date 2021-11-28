@@ -1,5 +1,5 @@
 import { Component, useEffect } from "react";
-import { BrowserRouter as Router, Route,Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
 import "./App.css";
@@ -20,6 +20,7 @@ import MainProfile from "./account/MainProfile";
 import EditProfile from "./account/EditProfile";
 import ChangeIcon from "./account/ChangeIcon";
 import ChangePass from "./account/ChangePass";
+import ForgotPassword from "./account/ForgotPassword";
 import TestResults from "./account/TestResults";
 import GenDesc from "./generaltest/GenDesc";
 import GenTest from "./generaltest/GenTest";
@@ -70,6 +71,7 @@ function App() {
               <Route exact path="/mainprofile" component={MainProfile} />
               <Route exact path="/editprofile" component={EditProfile} />
               <Route exact path="/changeicon" component={ChangeIcon} />
+              <Route exact path="/forgotpass" component={ForgotPassword} />
               <Route exact path="/changepass" component={ChangePass} />
               <Route exact path="/testresults" component={TestResults} />
               <Route exact path="/gendesc" component={GenDesc} />
@@ -84,14 +86,14 @@ function App() {
               <Route exact path="/specresults2" component={SpecResults2} />
               <Route exact path="/specresults3" component={SpecResults3} />
               <Route exact path="/welcome" component={Welcome} />
-              <Redirect from='*' to='/' />
+              <Redirect from="*" to="/" />
             </>
           ) : (
             <>
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/adminlogin" component={AdminLogin} />
-              <Redirect from='*' to='/login' />
+              <Redirect from="*" to="/login" />
             </>
           )}
 

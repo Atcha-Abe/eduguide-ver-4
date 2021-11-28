@@ -33,7 +33,7 @@ function SignUp(props) {
   async function handlePost() {
     if ((username, password)) {
       try {
-        const data= await createUser({
+        const data = await createUser({
           variables: {
             email: values.email,
             name: values.name,
@@ -43,13 +43,12 @@ function SignUp(props) {
             password: values.password,
           },
         });
-        if(data){
-          history.push('/login')
+        if (data) {
+          history.push("/login");
         }
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
-      
     }
   }
   function handleEnter() {
@@ -57,11 +56,11 @@ function SignUp(props) {
     createUser({
       variables: {
         email: values.email,
-          name: values.name,
-          username: values.username,
-          levelStrand: values.levelStrand,
-          school: values.school,
-          password: values.password,
+        name: values.name,
+        username: values.username,
+        levelStrand: values.levelStrand,
+        school: values.school,
+        password: values.password,
       },
     });
     axios
@@ -82,8 +81,8 @@ function SignUp(props) {
   const [school, setSchool] = useState("");
   const [password, setPassword] = useState("");
   const { handleSignup, values, handleSubmit, errors } = useForm(validate);
-  const [createUser,{data,loading,error}] = useMutation(CREATE_USER);
-  const history = useHistory()
+  const [createUser, { data, loading, error }] = useMutation(CREATE_USER);
+  const history = useHistory();
 
   return (
     <div align="center">
@@ -201,10 +200,15 @@ function SignUp(props) {
             </label>
           </div>
           <br></br>
-
-          <button className="reg-btn" type="submit" onClick={handlePost}>
-            Sign up
-          </button>
+          <Link
+            to="/welcome"
+            style={{ textDecoration: "none" }}
+            onClick={handlePost}
+          >
+            <button className="reg-btn" type="submit">
+              Sign up
+            </button>
+          </Link>
         </form>
         <br></br>
         <br></br>

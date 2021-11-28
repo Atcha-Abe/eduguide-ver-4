@@ -120,11 +120,17 @@ function LogIn() {
             />
           </label>
         </form>
+        <b>
+          <Link to="/forgotpass" style={{ textDecoration: "none" }}>
+            Forgot Password?
+          </Link>
+        </b>
         <br></br>
         <button className="reg-btn" type="submit" onClick={handleLogin}>
           Log in
         </button>
-
+        <br></br>
+        <br></br>
         <p>Log In with</p>
         <div align="center">
           <GLogin />
