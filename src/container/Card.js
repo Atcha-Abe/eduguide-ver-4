@@ -8,7 +8,6 @@ function Card({ title, imageUrl }) {
       </div>
       <div className="card-title" align='center"'>
         <p className="card-text">{title}</p>
-        <br></br>
       </div>
     </div>
   );

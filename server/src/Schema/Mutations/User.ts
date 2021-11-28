@@ -1,5 +1,5 @@
 import { GraphQLID, GraphQLString } from "graphql";
-import { UserType } from "../TypeDefs/User";
+import { UserInfoType, UserType } from "../TypeDefs/User";
 import { MessageType } from "../TypeDefs/Messages";
 import { Users } from "../../Entities/Users";
 
@@ -28,7 +28,7 @@ export const CREATE_USER = {
 };
 
 export const USER_LOGIN = {
-  type: MessageType,
+  type: UserInfoType,
   args: {
     username: { type: GraphQLString },
     password: { type: GraphQLString },
@@ -43,7 +43,7 @@ export const USER_LOGIN = {
     const userPassword = user?.password;
 
     if (password === userPassword) {
-      return { successful: true, message: "LOGIN SUCCESS!" };
+      return { successful: true, message: "LOGIN SUCCESS!" ,user:user };
     } else {
       throw new Error("WRONG PASSWORD!");
     }
