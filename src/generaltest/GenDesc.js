@@ -78,7 +78,9 @@ export default class GenDesc extends Component {
             Support Decision Integrity information as it pertains to the test.
           </label>
           <br></br>
+          <br></br>
           <label className="gen-desc">
+            &nbsp;&nbsp;
             <input
               type="checkbox"
               className="test-input"
@@ -88,7 +90,9 @@ export default class GenDesc extends Component {
             Support Decision Integrity information.
           </label>
           <br></br>
+          <br></br>
           <label className="gen-desc">
+            &nbsp;&nbsp;
             <input
               type="checkbox"
               className="test-input"
@@ -98,6 +102,8 @@ export default class GenDesc extends Component {
             about the web application.
           </label>
         </div>
+        <br></br>
+        <br></br>
         <div>
           <Link to="/gentest">
             <button

@@ -51,6 +51,7 @@ class App extends Component {
       cache: new InMemoryCache(),
     });
 
+<<<<<<< HEAD
     return (
       <Router>
         <ApolloProvider client={client}>
@@ -91,6 +92,47 @@ class App extends Component {
       </Router>
     );
   }
+=======
+  return (
+    <Router>
+      <ApolloProvider client={client}>
+        <div className="app">
+          <Navbar />
+          <Sidebar />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/blogs" component={Blogs} />
+          <Route exact path="/faqs" component={FAQs} />
+          <Route exact path="/community" component={Community} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/adminlogin" component={AdminLogin} />
+          <Route exact path="/adminpage" component={AdminPage} />
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path="/mainprofile" component={MainProfile} />
+          <Route exact path="/editprofile" component={EditProfile} />
+          <Route exact path="/changeicon" component={ChangeIcon} />
+          <Route exact path="/changepass" component={ChangePass} />
+          <Route exact path="/testresults" component={TestResults} />
+          <Route exact path="/gendesc" component={GenDesc} />
+          <Route exact path="/gentest" component={GenTest} />
+          <Route exact path="/genresults" component={GenResults} />
+          <Route exact path="/gencourses" component={GenCourses} />
+          <Route exact path="/specdesc" component={SpecDesc} />
+          <Route exact path="/bscompsci" component={BSCompSci} />
+          <Route exact path="/spectest2" component={SpecTest2} />
+          <Route exact path="/spectest3" component={SpecTest3} />
+          <Route exact path="/specresults1" component={SpecResults1} />
+          <Route exact path="/specresults2" component={SpecResults2} />
+          <Route exact path="/specresults3" component={SpecResults3} />
+          <Route exact path="/welcome" component={Welcome} />
+          <div className="push"></div>
+          <Footer />
+        </div>
+      </ApolloProvider>
+    </Router>
+  );
+>>>>>>> 734dcb5751963500f0a4bd5ab54531bd40a9d353
 }
 
 export default App;
