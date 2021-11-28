@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import "./Account.css";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import "antd/dist/antd.css";
+import { Avatar } from "antd";
+import { assertNamedType } from "graphql";
 
 function MainProfile() {
   const header = useSelector((state) => state.header);
@@ -12,12 +15,7 @@ function MainProfile() {
       <table className="profile-table">
         <tr>
           <td>
-            <div className="edit-iconbg">
-              <img src="./icons/bg icon.png"></img>
-              <div className="edit-icon">
-                <img src="./icons/icon 1.png"></img>
-              </div>
-            </div>
+            <Avatar size={64} icon="user" />
           </td>
           <td>
             <form className="edit-form">

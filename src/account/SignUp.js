@@ -29,6 +29,21 @@ function useKey(key, cb) {
 }
 
 function SignUp() {
+  function handlePost() {
+    if ((username, password)) {
+      createUser({
+        variables: {
+          email: email,
+          name: name,
+          username: username,
+          levelStrand: levelStrand,
+          school: school,
+          password: password,
+        },
+      });
+      <Link to="/login" />;
+    }
+  }
   function handleEnter() {
     console.log("Enter key is pressed");
     createUser({
@@ -86,7 +101,7 @@ function SignUp() {
             <label>
               Email:
               <input
-                type="text"
+                type="email"
                 name="email"
                 className="field"
                 onChange={handleSignup}
@@ -177,7 +192,8 @@ function SignUp() {
             </label>
           </div>
           <br></br>
-          <button className="reg-btn" type="submit">
+
+          <button className="reg-btn" type="submit" onClick={handlePost}>
             Sign up
           </button>
         </form>
