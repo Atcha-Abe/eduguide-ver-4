@@ -37,7 +37,7 @@ import BSIT from "./spectest/BSIT";
 import BSManAccount from "./spectest/BSManAccount";
 import BSMarketing from "./spectest/BSMarketing";
 import BSPsychology from "./spectest/BSPsychology";
-
+import ForgotPassword from "./account/ForgotPassword";
 import SpecResults1 from "./spectest/SpecResults1";
 import SpecTest2 from "./spectest/SpecTest2";
 import SpecResults2 from "./spectest/SpecResults2";
