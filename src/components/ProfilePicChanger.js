@@ -10,17 +10,17 @@ import Icon6 from "./pics/icon6.png";
 import Icon7 from "./pics/icon7.png";
 
 const ProfilePicChanger = ({ handleImageChange }) => {
-  const [imagesArray, setImmageArray] = useState([
-    Icon1,
-    Icon2,
-    Icon3,
-    Icon4,
-    Icon5,
-    Icon6,
-    Icon7,
-  ]);
+  // const [imagesArray, setImmageArray] = useState([
+  //   Icon1,
+  //   Icon2,
+  //   Icon3,
+  //   Icon4,
+  //   Icon5,
+  //   Icon6,
+  //   Icon7,
+  // ]);
 
-  const [currentImage, setCurrentImage] = useState(pic3);
+  const [currentImage, setCurrentImage] = useState(Icon2);
 
   const [visible, setVisible] = useState(false);
 
@@ -39,33 +39,14 @@ const ProfilePicChanger = ({ handleImageChange }) => {
   const fileSelectedHandler = (event) => {
     const reader = new FileReader();
     reader.onload = () => {
-      console.log(event.target.result);
       if (reader.readyState === 2) {
-        //0=empty, 1=loading, 2=done.
         setCurrentImage(reader.result);
-        console.log(reader.result);
+        handleImageChange(reader.result);
       }
     };
     reader.readAsDataURL(event.target.files[0]);
   };
 
-  const imageMapper = imagesArray.map((image) => {
-    return (
-      <>
-        <img
-          src={currentImage || image}
-          onClick={() => handleImageChange(image)}
-          height="10%"
-          width="10%"
-        />
-        <input
-          type="file"
-          onChange={fileSelectedHandler}
-          placeholder="Add Photo"
-        />
-      </>
-    );
-  });
   return (
     <div id="picture" align="center">
       <br></br>
@@ -79,7 +60,12 @@ const ProfilePicChanger = ({ handleImageChange }) => {
         onOk={handleOk}
         onCancel={handleCancel}
       >
-        {imageMapper}
+        <img src={currentImage} height="10%" width="10%" />
+        <input
+          type="file"
+          onChange={fileSelectedHandler}
+          placeholder="Add Photo"
+        />
       </Modal>
     </div>
   );
