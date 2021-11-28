@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Specialized.css";
-
+import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 export default class SpecDesc extends Component {
   state = {
@@ -29,6 +29,18 @@ export default class SpecDesc extends Component {
     );
   };
 
+  changeCourses = () => {
+    const history = useHistory();
+    const handleRoute = () => {
+
+      
+    }
+
+
+
+  }
+
+
   validateCheckbox = () => {
     const { checkbox } = this.state;
     let checkboxValid = true;
@@ -39,6 +51,8 @@ export default class SpecDesc extends Component {
     }
     this.setState({ checkboxValid, errorMsg }, this.validateForm);
   };
+
+  
 
   routeChange = (Link) => {
     let path = `/spectest`;
