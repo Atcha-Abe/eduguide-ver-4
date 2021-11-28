@@ -116,7 +116,7 @@ export default function GenTest() {
     },
   ];
 
-  questions.sort(() => Math.random() - 0.5);
+  //questions.sort(() => Math.random() - 0.5);
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);

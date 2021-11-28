@@ -26,7 +26,17 @@ import GenTest from "./generaltest/GenTest";
 import GenResults from "./generaltest/GenResults";
 import GenCourses from "./generaltest/GenCourses";
 import SpecDesc from "./spectest/SpecDesc";
-import SpecTest1 from "./spectest/BSCompSci";
+import BSCompSci from "./spectest/BSCompSci";
+import BAComms from "./spectest/BAComms";
+import BAEnglish from "./spectest/BAEnglish";
+import BAJournalism from "./spectest/BAJournalism";
+import BSAccountancy from "./spectest/BSAccountancy";
+import BSEntrep from "./spectest/BSEntrep";
+import BSIT from "./spectest/BSIT";
+import BSManAccount from "./spectest/BSManAccount";
+import BSMarketing from "./spectest/BSMarketing";
+import BSPsychology from "./spectest/BSPsychology";
+
 import SpecResults1 from "./spectest/SpecResults1";
 import SpecTest2 from "./spectest/SpecTest2";
 import SpecResults2 from "./spectest/SpecResults2";
@@ -67,7 +77,7 @@ class App extends Component {
             <Route exact path="/genresults" component={GenResults} />
             <Route exact path="/gencourses" component={GenCourses} />
             <Route exact path="/specdesc" component={SpecDesc} />
-            <Route exact path="/spectest1" component={SpecTest1} />
+            <Route exact path="/bscompsci" component={BSCompSci} />
             <Route exact path="/spectest2" component={SpecTest2} />
             <Route exact path="/spectest3" component={SpecTest3} />
             <Route exact path="/specresults1" component={SpecResults1} />

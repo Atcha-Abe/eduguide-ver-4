@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Specialized.css";
 
 import { Link } from "react-router-dom";
-import { triggerAsyncId } from "async_hooks";
+
 export default function BAJournalism() {
   const questions = [
     {
