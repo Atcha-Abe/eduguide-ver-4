@@ -1,5 +1,5 @@
-import { Component, useEffect } from "react";
-import { BrowserRouter as Router, Route,Redirect } from "react-router-dom";
+import { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
 import "./App.css";
@@ -26,13 +26,24 @@ import GenTest from "./generaltest/GenTest";
 import GenResults from "./generaltest/GenResults";
 import GenCourses from "./generaltest/GenCourses";
 import SpecDesc from "./spectest/SpecDesc";
-import SpecTest1 from "./spectest/BSCompSci";
+import BSCompSci from "./spectest/BSCompSci";
+import BAComms from "./spectest/BAComms";
+import BAEnglish from "./spectest/BAEnglish";
+import BAJournalism from "./spectest/BAJournalism";
+import BSAccountancy from "./spectest/BSAccountancy";
+import BSEntrep from "./spectest/BSEntrep";
+import BSIT from "./spectest/BSIT";
+import BSManAccount from "./spectest/BSManAccount";
+import BSMarketing from "./spectest/BSMarketing";
+import BSPsychology from "./spectest/BSPsychology";
+
 import SpecResults1 from "./spectest/SpecResults1";
 import SpecTest2 from "./spectest/SpecTest2";
 import SpecResults2 from "./spectest/SpecResults2";
 import SpecTest3 from "./spectest/SpecTest3";
 import SpecResults3 from "./spectest/SpecResults3";
 import Footer from "./components/Footer";
+<<<<<<< HEAD
 import { useDispatch, useSelector } from "react-redux";
 import { setAccountDetails } from "./store/actions/header";
 
@@ -54,64 +65,98 @@ function App() {
     uri: "http://localhost:8000",
     cache: new InMemoryCache(),
   });
+=======
+>>>>>>> bbab2a0c6ba4122c78f5e0a67d23063a4af7482a
 
-  useEffect(() => {
-    if (localStorage.getItem("user")) {
-      dispatch(
-        setAccountDetails(JSON.parse(localStorage.getItem("user")).username)
-      );
-    }
-  }, []);
+class App extends Component {
+  render() {
+    const client = new ApolloClient({
+      uri: "http://localhost:3001/graphql",
+      cache: new InMemoryCache(),
+    });
 
+<<<<<<< HEAD
+    return (
+      <Router>
+        <ApolloProvider client={client}>
+          <div className="app">
+            <Navbar />
+            <Sidebar />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/blogs" component={Blogs} />
+            <Route exact path="/faqs" component={FAQs} />
+            <Route exact path="/community" component={Community} />
+            <Route exact path="/contact" component={Contact} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/adminlogin" component={AdminLogin} />
+            <Route exact path="/adminpage" component={AdminPage} />
+            <Route exact path="/signup" component={Signup} />
+            <Route exact path="/mainprofile" component={MainProfile} />
+            <Route exact path="/editprofile" component={EditProfile} />
+            <Route exact path="/changeicon" component={ChangeIcon} />
+            <Route exact path="/changepass" component={ChangePass} />
+            <Route exact path="/testresults" component={TestResults} />
+            <Route exact path="/gendesc" component={GenDesc} />
+            <Route exact path="/gentest" component={GenTest} />
+            <Route exact path="/genresults" component={GenResults} />
+            <Route exact path="/gencourses" component={GenCourses} />
+            <Route exact path="/specdesc" component={SpecDesc} />
+            <Route exact path="/bscompsci" component={BSCompSci} />
+            <Route exact path="/spectest2" component={SpecTest2} />
+            <Route exact path="/spectest3" component={SpecTest3} />
+            <Route exact path="/specresults1" component={SpecResults1} />
+            <Route exact path="/specresults2" component={SpecResults2} />
+            <Route exact path="/specresults3" component={SpecResults3} />
+            <Route exact path="/welcome" component={Welcome} />
+            <div className="push"></div>
+            <Footer />
+          </div>
+        </ApolloProvider>
+      </Router>
+    );
+  }
+=======
   return (
     <Router>
       <ApolloProvider client={client}>
         <div className="app">
           <Navbar />
           <Sidebar />
-          {localStorage.getItem("user") || header ? (
-            <>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/about" component={About} />
-              <Route exact path="/blogs" component={Blogs} />
-              <Route exact path="/faqs" component={FAQs} />
-              <Route exact path="/community" component={Community} />
-              <Route exact path="/contact" component={Contact} />
-              <Route exact path="/adminpage" component={AdminPage} />
-              <Route exact path="/mainprofile" component={MainProfile} />
-              <Route exact path="/editprofile" component={EditProfile} />
-              <Route exact path="/changeicon" component={ChangeIcon} />
-              <Route exact path="/changepass" component={ChangePass} />
-              <Route exact path="/testresults" component={TestResults} />
-              <Route exact path="/gendesc" component={GenDesc} />
-              <Route exact path="/gentest" component={GenTest} />
-              <Route exact path="/genresults" component={GenResults} />
-              <Route exact path="/gencourses" component={GenCourses} />
-              <Route exact path="/specdesc" component={SpecDesc} />
-              <Route exact path="/spectest1" component={SpecTest1} />
-              <Route exact path="/spectest2" component={SpecTest2} />
-              <Route exact path="/spectest3" component={SpecTest3} />
-              <Route exact path="/specresults1" component={SpecResults1} />
-              <Route exact path="/specresults2" component={SpecResults2} />
-              <Route exact path="/specresults3" component={SpecResults3} />
-              <Route exact path="/welcome" component={Welcome} />
-              <Redirect from='*' to='/' />
-            </>
-          ) : (
-            <>
-              <Route exact path="/signup" component={Signup} />
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/adminlogin" component={AdminLogin} />
-              <Redirect from='*' to='/login' />
-            </>
-          )}
-
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/blogs" component={Blogs} />
+          <Route exact path="/faqs" component={FAQs} />
+          <Route exact path="/community" component={Community} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/adminlogin" component={AdminLogin} />
+          <Route exact path="/adminpage" component={AdminPage} />
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path="/mainprofile" component={MainProfile} />
+          <Route exact path="/editprofile" component={EditProfile} />
+          <Route exact path="/changeicon" component={ChangeIcon} />
+          <Route exact path="/changepass" component={ChangePass} />
+          <Route exact path="/testresults" component={TestResults} />
+          <Route exact path="/gendesc" component={GenDesc} />
+          <Route exact path="/gentest" component={GenTest} />
+          <Route exact path="/genresults" component={GenResults} />
+          <Route exact path="/gencourses" component={GenCourses} />
+          <Route exact path="/specdesc" component={SpecDesc} />
+          <Route exact path="/bscompsci" component={BSCompSci} />
+          <Route exact path="/spectest2" component={SpecTest2} />
+          <Route exact path="/spectest3" component={SpecTest3} />
+          <Route exact path="/specresults1" component={SpecResults1} />
+          <Route exact path="/specresults2" component={SpecResults2} />
+          <Route exact path="/specresults3" component={SpecResults3} />
+          <Route exact path="/welcome" component={Welcome} />
           <div className="push"></div>
           <Footer />
         </div>
       </ApolloProvider>
     </Router>
   );
+>>>>>>> 734dcb5751963500f0a4bd5ab54531bd40a9d353
 }
 
 export default App;

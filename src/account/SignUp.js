@@ -1,5 +1,4 @@
 import { useEffect, useState, useRef } from "react";
-import { useHistory } from "react-router-dom";
 import "./Account.css";
 import axios from "axios";
 
@@ -29,39 +28,32 @@ function useKey(key, cb) {
   }, [key]);
 }
 
-function SignUp(props) {
-  async function handlePost() {
+function SignUp() {
+  function handlePost() {
     if ((username, password)) {
-      try {
-        const data= await createUser({
-          variables: {
-            email: values.email,
-            name: values.name,
-            username: values.username,
-            levelStrand: values.levelStrand,
-            school: values.school,
-            password: values.password,
-          },
-        });
-        if(data){
-          history.push('/login')
-        }
-      } catch (error) {
-        console.log(error)
-      }
-      
+      createUser({
+        variables: {
+          email: email,
+          name: name,
+          username: username,
+          levelStrand: levelStrand,
+          school: school,
+          password: password,
+        },
+      });
+      <Link to="/login" />;
     }
   }
   function handleEnter() {
     console.log("Enter key is pressed");
     createUser({
       variables: {
-        email: values.email,
-          name: values.name,
-          username: values.username,
-          levelStrand: values.levelStrand,
-          school: values.school,
-          password: values.password,
+        email: email,
+        name: name,
+        username: username,
+        levelStrand: levelStrand,
+        school: school,
+        password: password,
       },
     });
     axios
@@ -82,8 +74,7 @@ function SignUp(props) {
   const [school, setSchool] = useState("");
   const [password, setPassword] = useState("");
   const { handleSignup, values, handleSubmit, errors } = useForm(validate);
-  const [createUser,{data,loading,error}] = useMutation(CREATE_USER);
-  const history = useHistory()
+  const [createUser] = useMutation(CREATE_USER);
 
   return (
     <div align="center">

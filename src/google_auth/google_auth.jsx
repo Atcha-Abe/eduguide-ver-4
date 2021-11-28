@@ -20,9 +20,9 @@ function Login(){
          return (
              <div>
             <GoogleLogin
-            clientId={clientId}
+            clientId={clientiD}
             buttonText="Login"
-            onSuccess={onSuccess}
+            onSuccess={onSucess}
             onFailure={onFailure}
             cookiePolicy={'single_host_origin'}
             style={{ marginTop: '100px' }}
