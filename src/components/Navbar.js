@@ -17,7 +17,8 @@ function NavBar() {
     dispatch(showSidebar());
   };
   const logoutClick = () => {
-    dispatch(logoutUser());
+    localStorage.removeItem('user')
+    dispatch(logoutUser()); 
   };
 
   return (
