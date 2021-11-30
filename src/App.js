@@ -44,7 +44,7 @@ import SpecTest3 from "./spectest/SpecTest3";
 import SpecResults3 from "./spectest/SpecResults3";
 import Footer from "./components/Footer";
 
-import ForgotPassword from "./account/ForgotPassword";
+// import ForgotPassword from "./components/ForgotPassword";
 
 class App extends Component {
   render() {
@@ -87,7 +87,7 @@ class App extends Component {
             <Route exact path="/specresults2" component={SpecResults2} />
             <Route exact path="/specresults3" component={SpecResults3} />
             <Route exact path="/welcome" component={Welcome} />
-            <Route exact path="/forgotpass" component={ForgotPassword} />
+            {/* <Route exact path="/forgotpass" component={ForgotPassword} /> */}
             <div className="push"></div>
             <Footer />
           </div>

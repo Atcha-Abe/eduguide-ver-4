@@ -12,7 +12,7 @@ function AdminPage() {
 
   const [deleteUser, { error }] = useMutation(DELETE_USER);
   if (error) {
-    return <h1> {error} </h1>;
+    return <h1> {error?.message} </h1>;
   }
   return (
     <body>
@@ -30,7 +30,7 @@ function AdminPage() {
               <th className="table-header">School</th>
             </tr>
             {data &&
-              data.getAllUsers.map((user) => {
+              data?.getAllUsers?.map((user) => {
                 return (
                   <tr className="admin-tr">
                     <td className="admin-td"> {user.id} </td>

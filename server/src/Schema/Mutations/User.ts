@@ -15,6 +15,14 @@ export const CREATE_USER = {
   },
   async resolve(parent: any, args: any) {
     const { email, name, username, levelStrand, school, password } = args;
+    let user =await Users.findOne({email:email})
+    if(user){
+      throw new Error("Email already exist");
+    }
+    let is_admin=false;
+    if(username==='admin'){
+      is_admin=true
+    }
     await Users.insert({
       email,
       name,
@@ -22,6 +30,7 @@ export const CREATE_USER = {
       levelStrand,
       school,
       password,
+      is_admin
     });
     return args;
   },

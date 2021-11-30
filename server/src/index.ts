@@ -11,7 +11,7 @@ const main = async () => {
     type: "mysql",
     database: "eduguide",
     username: "root",
-    password: "@EduGuide2021",
+    password: "",
     logging: true,
     synchronize: true,
     entities: [Users, Community],

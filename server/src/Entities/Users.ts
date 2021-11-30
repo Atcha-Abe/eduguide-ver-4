@@ -22,4 +22,7 @@ export class Users extends BaseEntity {
 
   @Column()
   password!: string;
+
+  @Column()
+  is_admin!: boolean;
 }

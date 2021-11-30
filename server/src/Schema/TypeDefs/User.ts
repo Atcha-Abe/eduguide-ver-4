@@ -10,5 +10,6 @@ export const UserType = new GraphQLObjectType({
     levelStrand: { type: GraphQLString },
     school: { type: GraphQLString },
     password: { type: GraphQLString },
+    is_admin: { type:GraphQLBoolean }
   }),
 });
