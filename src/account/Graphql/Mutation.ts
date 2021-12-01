@@ -89,10 +89,17 @@ export const DELETE_USER = gql`
 `;
 
 export const CREATE_COMMUNITY = gql`
-  mutation createCommunity($id: ID! $comment: String!) {
-    createCommunity(id: $id comment: $comment) {
-      id
+  mutation createCommunity($comment: String!) {
+    createCommunity(comment: $comment) {
       comment
+    }
+  }
+`;
+
+export const DELETE_COMMUNITY = gql`
+  mutation deleteCommunity($id: ID!) {
+    deleteCommunity(id: $id) {
+      message
     }
   }
 `;

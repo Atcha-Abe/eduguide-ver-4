@@ -99,14 +99,12 @@ function App() {
               <Route exact path="/specresults3" component={SpecResults3} />
               <Route exact path="/welcome" component={Welcome} />
               {/* <Route exact path="/forgotpass" component={ForgotPassword} /> */}
-              <Redirect from='*' to='/' />
             </>
           ) : (
             <>
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/adminlogin" component={AdminLogin} />
-              <Redirect from='*' to='/login' />
             </>
           )}
 

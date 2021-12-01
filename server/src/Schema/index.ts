@@ -7,7 +7,7 @@ import {
   UPDATE_PASSWORD,
   USER_LOGIN,
 } from "./Mutations/User";
-import { CREATE_COMMUNITY } from "./Mutations/Community";
+import { CREATE_COMMUNITY, DELETE_COMMUNITY } from "./Mutations/Community";
 import { GET_ALL_POSTS } from "./Queries/Community";
 
 const RootQuery = new GraphQLObjectType({
@@ -26,8 +26,9 @@ const Mutation = new GraphQLObjectType({
     editProfile: EDIT_PROFILE,
     deleteUser: DELETE_USER,
     updatePassword: UPDATE_PASSWORD,
-
-    createCommunity: CREATE_COMMUNITY
+    
+    createCommunity: CREATE_COMMUNITY,
+    deleteCommunity: DELETE_COMMUNITY
   },
 });
 

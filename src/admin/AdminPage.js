@@ -10,7 +10,8 @@ import { useQuery, useMutation } from "@apollo/client";
 function AdminPage() {
   const { data } = useQuery(GET_ALL_USERS);
 
-  const [deleteUser, { error }] = useMutation(DELETE_USER);
+  const [deleteUser, { error }] = useMutation(DELETE_USER,{refetchQueries:[GET_ALL_USERS]});
+  const userInfo = JSON.parse(localStorage.getItem('user'))
   if (error) {
     return <h1> {error?.message} </h1>;
   }
@@ -28,9 +29,10 @@ function AdminPage() {
               <th className="table-header">Username</th>
               <th className="table-header">Level/Strand</th>
               <th className="table-header">School</th>
+              <th className="table-header">Action</th>
             </tr>
             {data &&
-              data?.getAllUsers?.map((user) => {
+              data?.getAllUsers?.filter(user=>user.id!==userInfo?.id)?.map((user) => {
                 return (
                   <tr className="admin-tr">
                     <td className="admin-td"> {user.id} </td>
@@ -40,14 +42,14 @@ function AdminPage() {
                     <td className="admin-td"> {user.levelStrand} </td>
                     <td className="admin-td"> {user.school} </td>
                     <td className="admin-td">
-                      <button
+                      {userInfo?.is_admin && <button
                         className="del-btn"
                         onClick={() => {
                           deleteUser({ variables: { id: user.id } });
                         }}
                       >
                         Delete
-                      </button>
+                      </button>}
                       <br></br>
                       <br></br>{" "}
                     </td>
